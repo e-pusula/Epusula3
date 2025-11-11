@@ -10,6 +10,7 @@
     <link rel="icon" href="assets/img/logo.png" type="image/x-icon" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -35,42 +36,292 @@
       }
     </script>
 
-
+    <!-- Tüm CSS kodları style.css'e taşındı -->
     <link rel="stylesheet" crossorigin href="/assets/style.css">
   </head>
-
   <body>
-
-
-    <div class="container">
-      <div class="header">
-          <img src="assets/img/logo.png" alt="e-Pusula Logo">
-          <div class="nav">
-              <a href="#">Hakkımızda</a>
-              <a href="#">Programlar</a>
-              <a href="#">Sistemimiz</a>
-              <a href="#">İletişim</a>
-              <a href="#">Başvur</a>
-              <a href="#">Deneme Dersin Girin</a>
+    <a href="#main" class="story-link" style="position:absolute;left:-9999px;top:auto;overflow:hidden">İçeriğe atla</a>
+  
+    <header>
+      <div class="nav-box">
+        <nav>
+          <div class="logo">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <img style="border-radius: 5px;" src="/assets/img/logo.png" alt="Logo">
+              <span style="color: #000; font-weight: bold;">e-Pusula</span>
+            </div>
           </div>
+          <ul class="nav md-show">
+            <li><a class="story-link" href="#about">Hakkımızda</a></li>
+            <li><a class="story-link" href="#programs">Programlar</a></li>
+            <li><a class="story-link" href="#system">Sistemimiz</a></li>
+            <li><a class="story-link" href="#contact">İletişim</a></li>
+            <li><a class="story-link" href="https://forms.gle/o2jsCjgq6iahDkEj6" target="_blank" rel="noreferrer">Başvur</a></li>
+            <li><a class="story-link" href="#trial">Deneme Dersini Girin</a></li>
+          </ul>
+  
+          <!-- Basit mobil menü (detay/summary ile) -->
+          <div class="md-hide">
+            <details>
+              <summary class="story-link">Menü ▾</summary>
+              <nav style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
+                <a class="story-link" href="#about">Hakkımızda</a>
+                <a class="story-link" href="#programs">Programlar</a>
+                <a class="story-link" href="#system">Sistemimiz</a>
+                <a class="story-link" href="#contact">İletişim</a>
+                <a class="story-link" href="https://forms.gle/o2jsCjgq6iahDkEj6" target="_blank" rel="noreferrer">Başvur</a>
+                <a class="story-link" href="#trial">Deneme Dersini Girin</a>
+                <a class="story-link" href="https://www.instagram.com/epusula_/" target="_blank" rel="noreferrer">Instagram</a>
+              </nav>
+            </details>
+          </div>
+        </nav>
       </div>
-      <div class="content">
-          <div class="text-content">
-              <h1>Başarıya giden <span>yolun pusulası</span></h1>
-              <p>Türkiye'nin en iyi lise ve üniversitelerinde okuyan öğrencilere başarı hikayeleriyle rehberlik.</p>
-              <div class="buttons">
-                  <a href="#" class="btn-purple">Bize Katıl!</a>
-                  <a href="#" class="btn-gray">Bize Soru Sorun (WhatsApp)</a>
-                  <a href="#" class="btn-gray">Instagram</a>
+    </header>
+  
+    <main id="main">
+      <!-- Hero -->
+      <section aria-labelledby="hero-title" class="hero section">
+        <div class="container">
+          <div style="display:grid;gap:16px;align-content:center">
+            <h1 id="hero-title">
+              Başarıya giden yolun <span style="color:var(--primary);border-bottom:4px solid rgba(124,58,237,0.3);padding-bottom:4px">pusulası</span>
+            </h1>
+            <p class="muted" style="font-weight:600;margin:4px 0">e-Pusula</p>
+            <p class="muted" style="max-width:50ch; font-size: 20px">Türkiye’nin en iyi lise ve üniversitelerinde okuyan; uluslararası yarışmalarda Türkiye’yi başarıyla temsil etmiş öğrencilerden rehberlik.</p>
+  
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+              <a class="button-primary" href="https://forms.gle/o2jsCjgq6iahDkEj6" target="_blank" rel="noreferrer" class="btn btn-hero">Bize Katılın!</a>
+              <a class="button-primary" href="https://wa.me/905518420888?text=Merhaba%2C%20e-Pusula%20hakk%C4%B1nda%20ayr%C4%B1nt%C4%B1l%C4%B1%20bilgi%20almak%20istiyorum." target="_blank" rel="noreferrer" class="btn btn-outline">Bize Soru Sorun (WhatsApp)</a>
+              <a class="button-primary" href="https://www.instagram.com/epusula_/" target="_blank" rel="noreferrer" class="btn btn-outline">Instagram</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="container" style="margin-top:16px">
+          <div class="card">
+            <!--  heroImg import  -->
+            <img src="assets/img/homepage.jpg" alt="Mutlu öğrenciler ve parlayan pusula ile e-Pusula kahraman görseli" class="rounded-xl" />
+          </div>
+        </div>
+      </section>
+  
+      <!-- About -->
+      <section id="about" aria-labelledby="about-title" class="section">
+        <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+          <div class="left">
+            <h2 id="about-title" style="font-size:1.6rem;margin:0 0 8px 0">Biz Kimiz?</h2>
+            <p>e-Pusula; Türkiye’nin en iyi lise ve üniversitelerinde okuyan, uluslararası arenada Türkiye’yi başarıyla temsil etmiş seçkin öğrenciler tarafından kurulan bir eğitim platformudur.</p>
+            <div class="badges">
+              <div class="card">
+                <strong><i class="fa-solid fa-trophy"></i></strong><span>Uluslararası yarışmalarda Türkiye’yi başarıyla temsil etme</span>
               </div>
+              <div class="card">
+                <strong><i class="fa-solid fa-users"></i></strong><span>Tecrübeli, genç ve dinamik eğitmenler</span>
+              </div>
+              <div class="card">
+                <strong><i class="fa-solid fa-graduation-cap"></i></strong><span>Türkiye’nin ve dünyanın en iyi üniversiteleri ve liselerinde okuyan</span>
+              </div>
+              <div class="card">
+                <strong><i class="fa-solid fa-compass"></i></strong><span>Öğrencilere hayatlarında rehberlik edip yol gösteren</span>
+              </div>
+            </div>
           </div>
-          <div class="image-content">
-              <!-- Resim burada yer alacak, örnek bir yer tutucu -->
-              <img src="assets/img/homepage.jpg" alt="Öğrenciler">
+          <div class="right card">
+            <h3 style="margin:0 0 6px 0;font-weight:700">Neden e-Pusula?</h3>
+            <p class="muted">Öğrenciler ve veliler için net, planlı ve motive edici bir öğrenme deneyimi.</p>
+            <ul style="margin-top:12px;padding-left:18px;list-style: none;">
+              <li><i class="fa-regular fa-circle-check"></i> Kişiye özel öğrenme planları</li>
+              <li><i class="fa-regular fa-circle-check"></i> Düzenli mentorluk ve geri bildirim</li>
+              <li><i class="fa-regular fa-circle-check"></i> Topluluk desteği ve motivasyon</li>
+            </ul>
           </div>
+        </div>
+      </section>
+  
+      <!-- Programs -->
+      <section id="programs" aria-labelledby="programs-title" class="section muted-40">
+        <div class="container">
+          <h2 id="programs-title" style="text-align:center;margin-bottom:18px">Programlarımız</h2>
+          <div class="grid-3">
+            <div class="card">
+              <h4>İlkokul Matematik</h4>
+              <p class="muted">Temel beceriler, oyunlaştırma ve sağlam altyapı.</p>
+            </div>
+            <div class="card">
+              <h4>İlkokul Fen</h4>
+              <p class="muted">Merak uyandıran deneyler ve keşif temelli öğrenme.</p>
+            </div>
+            <div class="card">
+              <h4>Ortaokul Matematik</h4>
+              <p class="muted">Kavram odaklı ilerleme ve problem çözme.</p>
+            </div>
+            <div class="card">
+              <h4>Ortaokul Fen</h4>
+              <p class="muted">Müfredat uyumlu, interaktif ve uygulamalı dersler.</p>
+            </div>
+            <div class="card">
+              <h4>LGS Matematik</h4>
+              <p class="muted">Kazanım temelli dersler ve deneme analizleri.</p>
+            </div>
+            <div class="card">
+              <h4>Matematik Olimpiyatları</h4>
+              <p class="muted">Temelden ileri seviyeye olimpiyat hazırlık.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- System -->
+      <section id="system" aria-labelledby="system-title" class="section">
+        <div class="container" style="max-width:900px;margin:0 auto">
+          <h2 id="system-title" style="text-align:center;margin-bottom:12px">Sistemimiz</h2>
+          <div style="display:grid;grid-template-columns:1fr;gap:18px">
+            <ul style="list-style:none;padding:0;margin:0">
+              <li style="margin-bottom:8px">• 5–10 kişilik interaktif sınıflar 🎯</li>
+              <li style="margin-bottom:8px">• Google Classroom ile kolay erişim 💻</li>
+              <li style="margin-bottom:8px">• Haftalık 5+ saat planlı ders 📅</li>
+              <li style="margin-bottom:8px">• Ödev & İlerleme takibi ✏️</li>
+              <li style="margin-bottom:8px">• Öğretmenlerle anlık soru-cevap 📲</li>
+            </ul>
+  
+            <div class="card">
+              <h4 style="margin:0 0 6px 0">Planlı ve Şeffaf</h4>
+              <p class="muted">Haftalık program, kayıtlar ve ödevler tek yerde. Öğrenciler ve veliler; ders akışı, geri bildirimler ve gelişim metriklerini panel üzerinden kolayca takip eder.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Advantages -->
+      <section id="advantages" aria-labelledby="advantages-title" class="section">
+        <div class="container">
+          <h2 id="advantages-title" style="text-align:center;margin-bottom:12px">Online Eğitimin Avantajları</h2>
+          <div class="grid-3">
+            <div class="card">
+              <h4>Yeni Arkadaşlıklar</h4>
+              <p class="muted">Disiplinli topluluklarla birlikte, motive edici bir öğrenme ortamı.</p>
+            </div>
+            <div class="card">
+              <h4>Rahat Giriş, Kameralar Açık</h4>
+              <p class="muted">Google Classroom ve canlı derslerle düzenli, etkileşimli eğitim.</p>
+            </div>
+            <div class="card">
+              <h4>Uzman Kadro</h4>
+              <p class="muted">Madalyalı, deneyimli mentorlarla güçlü bir rehberlik.</p>
+            </div>
+            <div class="card">
+              <h4>Profesyonel Müfredat</h4>
+              <p class="muted">Okul müfredatından farklı, zenginleştirilmiş ve seviyeye uygun içerik.</p>
+            </div>
+            <div class="card">
+              <h4>Planlı Program</h4>
+              <p class="muted">Haftalık ders akışı, ödev ve deneme takipleriyle net süreç.</p>
+            </div>
+            <div class="card">
+              <h4>Şeffaf ve Güvenli</h4>
+              <p class="muted">Veliler için net raporlar ve kayıtlarla şeffaf süreç yönetimi.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Testimonials -->
+      <section aria-labelledby="testimonials-title" class="section muted-40">
+        <div class="container">
+          <h2 id="testimonials-title" style="text-align:center;margin-bottom:12px">Öğrenci & Veli Yorumları</h2>
+          <div class="test-grid">
+            <div class="card">
+              <div style="display:flex;gap:12px;align-items:center">
+                <img src="assets/avatar-1.jpg" alt="Efe avatar" style="width:48px;height:48px;border-radius:9999px;object-fit:cover">
+                <div>
+                  <strong>Efe (8. Sınıf)</strong><div class="muted">e-Pusula ailesi</div>
+                </div>
+              </div>
+              <p style="margin-top:10px">“LGS çalışmalarım e-Pusula ile çok daha planlı. Deneme analizleri harika!”</p>
+            </div>
+  
+            <div class="card">
+              <div style="display:flex;gap:12px;align-items:center">
+                <img src="assets/avatar-2.jpg" alt="Ayşe avatar" style="width:48px;height:48px;border-radius:9999px;object-fit:cover">
+                <div>
+                  <strong>Ayşe (Veli)</strong><div class="muted">e-Pusula ailesi</div>
+                </div>
+              </div>
+              <p style="margin-top:10px">“Mentorlarımız çok ilgili. Kızımın motivasyonu gözle görülür arttı.”</p>
+            </div>
+  
+            <div class="card">
+              <div style="display:flex;gap:12px;align-items:center">
+                <img src="assets/avatar-3.jpg" alt="Deniz avatar" style="width:48px;height:48px;border-radius:9999px;object-fit:cover">
+                <div>
+                  <strong>Deniz (6. Sınıf)</strong><div class="muted">e-Pusula ailesi</div>
+                </div>
+              </div>
+              <p style="margin-top:10px">“STEM etkinlikleri çok eğlenceli ve öğretici. Projeler yapıyoruz!”</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Trial -->
+      <section id="trial" aria-labelledby="trial-title" class="section">
+        <div class="container" style="text-align:center">
+          <h2 id="trial-title" style="margin-bottom:8px">Deneme Dersine Katılın</h2>
+          <p class="muted" style="max-width:60ch;margin:0 auto 12px">e-Pusula’daki eğitimi yakından görmek için ücretsiz deneme dersine katılın. Hemen başvurun ya da bizi arayın.</p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px">
+            <a href="#contact" class="btn btn-hero">Başvuru Formu</a>
+            <a href="tel:+905518420888" class="btn btn-outline">📞 Hemen Ara</a>
+          </div>
+          <p class="muted" style="font-size:12px;margin-top:8px">İlk deneme dersi tamamen ücretsizdir.</p>
+        </div>
+      </section>
+  
+      <!-- Contact / CTA -->
+      <section id="contact" aria-labelledby="contact-title" class="section">
+        <div class="container" style="display:grid;grid-template-columns:1fr;gap:18px">
+          <div>
+            <h2 id="contact-title">Gelin beraber istişare edelim</h2>
+            <p class="muted">Kayıt ve detaylar için formu doldurun; ekibimiz en kısa sürede sizinle iletişime geçsin.</p>
+  
+            <div class="card" style="background:linear-gradient(90deg,#6d28d9,#4f46e5);color:white;margin-top:12px">
+              <p style="font-weight:700;margin:0">Telefon:</p>
+              <p style="margin:4px 0 8px 0">+90 551 842 0888</p>
+              <p style="font-weight:700;margin:0">E-posta:</p>
+              <p style="margin:4px 0 8px 0">epusula.akademi@gmail.com</p>
+              <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+                <a href="tel:+905518420888" class="btn btn-hero">📞 Hemen Ara</a>
+                <a href="https://wa.me/905518420888" target="_blank" rel="noreferrer" class="btn btn-outline">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card">
+            <h3>Başvuru Formu</h3>
+            <p class="muted">Google Form üzerinden hızlı başvuru yapın.</p>
+            <div style="text-align:center;margin-top:12px">
+              <a href="https://forms.gle/o2jsCjgq6iahDkEj6" target="_blank" rel="noreferrer" class="btn btn-hero">Google Formu Aç</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  
+    <footer>
+      <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
+        <div class="logo">e-Pusula</div>
+        <div style="font-size:0.95rem" class="muted">© <span id="year"></span> e-Pusula Akademi. Tüm hakları saklıdır.</div>
+        <div style="display:flex;gap:12px">
+          <a class="story-link" href="tel:+905518420888">+90 551 842 0888</a>
+          <a class="story-link" href="mailto:epusula.akademi@gmail.com">epusula.akademi@gmail.com</a>
+        </div>
       </div>
-  </div>
-
+    </footer>
+  
+    <script>
+      // yıl bilgisini doldur
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 
   </body>
 </html>

@@ -1,70 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&display=swap');
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #f5f5f5;
-        }
-        .container {
-            text-align: center;
-            width: 80%;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-        }
-        .header img {
-            width: 40px;
-        }
-        .nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-        }
-        .content {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            margin-top: 50px;
-        }
-        .text-content h1 {
-            font-size: 3em;
-            color: #6b21a8;
-        }
-        .text-content h1 span {
-            color: #a855f7;
-            font-weight: bold;
-        }
-        .text-content p {
-            color: #4b5563;
-            max-width: 400px;
-        }
-        .buttons a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 8px;
-        }
-        .btn-purple {
-            background: #8b5cf6;
-            color: white;
-        }
-        .btn-gray {
-            background: #e5e7eb;
-            color: #333;
-        }
-        .image-content {
-            background: linear-gradient(135deg, #f9a8d4, #fff);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .image-content img {
-            max-width: 300px;
-        }
+/* Genel ayarlar */
+:root {
+  --bg: #ffffff; /* Beyaz arka plan */
+  --fg: #020817; /* Siyah yazı rengi */
+  --muted: #6b7280; /* Daha açık gri ton */
+  --primary: #7c3aed; /* Mor */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Konteyner */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 16px;
+  display: block; /* Gereksiz grid düzeni kaldırıldı */
+}
+
+i {
+  color: var(--primary);
+}
+
+/* Header */
+header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+header .logo img {
+  max-width: 36px; /* Logo boyutu 36x36 olarak ayarlandı */
+  height: 36px;
+}
+
+header .logo span {
+  font-size: 1.2rem; 
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-box{
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+ul.nav {
+  display: flex;
+  gap: 1.5rem; /* Menü öğeleri arasındaki boşluk azaltıldı */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.story-link {
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Hero */
+.hero {
+  padding: 6rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1.05;
+  word-break: break-word;
+  font-family: Poppins, ui-sans-serif, system-ui;
+  margin: 0;
+  max-width: 475px; /* Genişlik sınırı eklendi */
+}
+
+.hero p.muted {
+  color: var(--muted);
+}
+
+/* Görseller */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero img {
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Daha belirgin gölge eklendi */
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+  .md-show {
+    display: block;
+  }
+  .md-hide {
+    display: none;
+  }
+}
+
+
+/* Basic Button Styles */
+.button-primary {
+  background: linear-gradient(to bottom, #5b1b9a, #4423ba); /* Gradient Background */
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+/* Hover State */
+.button-primary:hover {
+  background: linear-gradient(to bottom, #885EBA, #B369FF); /* Adjusted hover gradient */
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Active (Pressed) State */
+.button-primary:active {
+  background: linear-gradient(to bottom, #774499, #9966CC);
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Button Styles */
+.hero .button-primary:first-child {
+  /* İlk buton renkli bırakıldı */
+  background: linear-gradient(to bottom, #5b1b9a, #4423ba);
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(91, 27, 154, 0.4), 0 2px 4px rgba(68, 35, 186, 0.3); /* Buton renkleriyle uyumlu gölge eklendi */
+}
+
+.hero .button-primary:not(:first-child) {
+  /* Diğer butonlar şeffaf yapıldı ve yazı siyah */
+  background: transparent;
+  color: #000;
+}
+
+.hero .button-primary:not(:first-child):hover {
+  /* Hover durumunda ilk butonun rengi gibi yapıldı */
+  background: linear-gradient(to bottom, #5b1b9a, #4423ba);
+  color: #FFFFFF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .button-primary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* "Biz Kimiz" kısmı */
+
+#about .left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#about .left p {
+  /* İlk yazı için stil */
+  color: var(--muted);
+  margin: 4px 0;
+  font-size: 16px;
+  max-width: 50ch;
+}
+
+#about .badges {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* Varsayılan olarak 2 sütun */
+}
+
+@media (min-width: 1024px) {
+  #about .badges {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 1024px ve üzeri için 3 sütun */
+  }
+}
+
+@media (max-width: 640px) {
+  #about .badges {
+    grid-template-columns: 1fr; /* 640px altı için tek sütun */
+  }
+}
+
+#about .badges .card {
+  /* Kartlar için buton tasarımı */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+#about .badges .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#about .right {
+  /* Sağdaki büyük kart */
+  align-self: start;
+  padding: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about .right p {
+  color: var(--muted);
+  font-size: 14px;
+}
