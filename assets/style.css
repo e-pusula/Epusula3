@@ -56,6 +56,25 @@ nav {
 
 .nav-box{
   padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-box .hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--fg);
+}
+
+.nav-box .hamburger i {
+  color: var(--primary);
+}
+
+.nav-box .nav {
+  display: flex;
+  gap: 1.5rem;
 }
 
 .logo {
@@ -124,6 +143,27 @@ img {
   }
 }
 
+@media (max-width: 768px) {
+  .nav-box .nav {
+    display: none; /* Menü gizlenir */
+    flex-direction: column;
+    background: var(--bg);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+
+  .nav-box .nav.active {
+    display: flex; /* Menü açılır */
+  }
+
+  .nav-box .hamburger {
+    display: block; /* Hamburger simgesi görünür */
+  }
+}
 
 /* Basic Button Styles */
 .button-primary {
@@ -248,7 +288,6 @@ img {
 #about .right p {
   color: var(--muted);
   font-size: 14px;
-}
 
 /* Hamburger Menu */
 .hamburger {
@@ -362,4 +401,5 @@ img {
 
 .no-scroll {
   overflow: hidden;
+}
 }
