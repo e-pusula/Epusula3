@@ -60,21 +60,24 @@
             <li><a class="story-link" href="#trial">Deneme Dersini Girin</a></li>
           </ul>
   
-          <!-- Basit mobil menü (detay/summary ile) -->
-          <div class="md-hide">
-            <details>
-              <summary class="story-link">Menü ▾</summary>
-              <nav style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
-                <a class="story-link" href="#about">Hakkımızda</a>
-                <a class="story-link" href="#programs">Programlar</a>
-                <a class="story-link" href="#system">Sistemimiz</a>
-                <a class="story-link" href="#contact">İletişim</a>
-                <a class="story-link" href="https://forms.gle/o2jsCjgq6iahDkEj6" target="_blank" rel="noreferrer">Başvur</a>
-                <a class="story-link" href="#trial">Deneme Dersini Girin</a>
-                <a class="story-link" href="https://www.instagram.com/epusula_/" target="_blank" rel="noreferrer">Instagram</a>
-              </nav>
-            </details>
-          </div>
+          <!-- Hamburger Menu -->
+          <button id="hamburger-button" class="hamburger hamburger--spin md-hide" aria-label="Menu" aria-expanded="false">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </nav>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu">
+        <nav>
+          <a class="story-link" href="#about">Hakkımızda</a>
+          <a class="story-link" href="#programs">Programlar</a>
+          <a class="story-link" href="#system">Sistemimiz</a>
+          <a class="story-link" href="#contact">İletişim</a>
+          <a class="story-link" href="https://forms.gle/o2jsCjgq6iahDkEj6" target="_blank" rel="noreferrer">Başvur</a>
+          <a class="story-link" href="#trial">Deneme Dersini Girin</a>
+          <a class="story-link" href="https://www.instagram.com/epusula_/" target="_blank" rel="noreferrer">Instagram</a>
         </nav>
       </div>
     </header>
@@ -321,6 +324,27 @@
     <script>
       // yıl bilgisini doldur
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Hamburger Menu
+      const hamburgerButton = document.getElementById('hamburger-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const body = document.body;
+
+      hamburgerButton.addEventListener('click', () => {
+        hamburgerButton.classList.toggle('is-active');
+        mobileMenu.classList.toggle('is-active');
+        body.classList.toggle('no-scroll');
+      });
+
+      // Close menu when a link is clicked
+      const mobileMenuLinks = document.querySelectorAll('.mobile-menu .story-link');
+      mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburgerButton.classList.remove('is-active');
+          mobileMenu.classList.remove('is-active');
+          body.classList.remove('no-scroll');
+        });
+      });
     </script>
 
   </body>
