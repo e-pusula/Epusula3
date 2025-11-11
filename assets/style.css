@@ -249,3 +249,62 @@ img {
   color: var(--muted);
   font-size: 14px;
 }
+
+.nav-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-box .hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--fg);
+}
+
+.nav-box .hamburger i {
+  color: var(--primary);
+}
+
+.nav-box .nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-box .nav li {
+  list-style: none;
+}
+
+.nav-box .nav a {
+  text-decoration: none;
+  color: var(--fg);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .nav-box .nav {
+    display: none; /* Menü başlangıçta gizlenir */
+    flex-direction: column;
+    background: var(--bg);
+    position: absolute;
+    top: 0;
+    right: -100%; /* Menü başlangıçta görünmez */
+    width: 75%; /* Menü genişliği */
+    height: 100vh; /* Tam ekran yüksekliği */
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transition: right 0.3s ease, opacity 0.3s ease; /* Sağdan kayma ve opaklık animasyonu */
+    opacity: 0; /* Görünmezlik başlangıç durumu */
+  }
+
+  .nav-box .nav.active {
+    right: 0; /* Menü görünür hale gelir */
+    opacity: 1; /* Görünürlük */
+  }
+
+  .nav-box .hamburger {
+    display: block; /* Hamburger simgesi görünür */
+  }
+}
