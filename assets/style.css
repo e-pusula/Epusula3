@@ -363,7 +363,7 @@ img {
   background: linear-gradient(135deg, #7C3AED, #3B82F6); /* Mor ve mavi */
 }
 
-#programs .card:nth-child(6) i { /* Matematik Olimpiyatları */
+#programs .card:nth-child(6) i { /* Matematik Olimpiyatları*/
   background: linear-gradient(135deg, #3B82F6, #7C3AED); /* Mavi ve mor */
 }
 
