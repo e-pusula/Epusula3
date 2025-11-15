@@ -189,7 +189,17 @@ img {
 
 /* "Biz Kimiz" kısmı */
 
+#about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Varsayılan olarak iki sütun */
+  gap: 24px;
+}
 
+@media (max-width: 770px) {
+  #about .container {
+    grid-template-columns: 1fr; /* 770px altı için tek sütun */
+  }
+}
 
 #about .left {
   display: flex;
@@ -475,4 +485,82 @@ section h2 {
 section {
   margin-bottom: 6rem;
   margin-top: 6rem;
+}
+
+.testimonials-carousel .card {
+  flex: 0 0 calc(33.333% - 11px); /* 3 kart yan yana */
+  min-width: 280px;
+  scroll-snap-align: start;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .testimonials-carousel .card {
+    flex: 0 0 calc(50% - 8px); /* 2 kart */
+  }
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .testimonials-carousel .card {
+    flex: 0 0 85%; /* 1 kart */
+  }
+}
+
+.testimonials-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.testimonials-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 8px 0;
+  min-width: 100%; /* Minimum genişlik eklendi */
+}
+
+.testimonials-carousel .card {
+  flex: 0 0 400px; /* Kartların sabit genişliği */
+}
+
+.testimonials-carousel::-webkit-scrollbar {
+  display: none; /* Kaydırma çubuğunu gizle */
+}
+
+.arrow {
+  /* background: var(--primary); */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.arrow:hover {
+  background: #5b1b9a;
+}
+
+.left-arrow {
+  position: absolute;
+  left: -20px;
+}
+
+.right-arrow {
+  position: absolute;
+  right: -20px;
+}
+
+.muted 
+{
+  color: var(--muted);
 }

@@ -93,7 +93,7 @@
   
       <!-- About -->
       <section id="about" aria-labelledby="about-title" class="section">
-        <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+        <div class="container">
           <div class="left">
             <h2 id="about-title" style="margin:0 0 8px 0">Biz Kimiz?</h2>
             <p>e-Pusula; Türkiye’nin en iyi lise ve üniversitelerinde okuyan, uluslararası arenada Türkiye’yi başarıyla temsil etmiş seçkin öğrenciler tarafından kurulan bir eğitim platformudur.</p>
@@ -226,36 +226,42 @@
       <section aria-labelledby="testimonials-title" class="section muted-40">
         <div class="container">
           <h2 id="testimonials-title" style="text-align:center;margin-bottom:12px">Öğrenci & Veli Yorumları</h2>
-          <div class="test-grid">
-            <div class="card">
-              <div style="display:flex;gap:12px;align-items:center">
-                <img src="assets/avatar-1.jpg" alt="Efe avatar" style="width:48px;height:48px;border-radius:9999px;object-fit:cover">
-                <div>
-                  <strong>Efe (8. Sınıf)</strong><div class="muted">e-Pusula ailesi</div>
+          <div class="testimonials-wrapper">
+            <button class="arrow left-arrow" aria-label="Geri">
+              <i class="fa fa-chevron-left"></i>
+            </button>
+            <div class="testimonials-carousel">
+              <div class="card">
+                <div style="display:flex;gap:12px;align-items:center">
+                  <img src="assets/img/avatar-1.jpg" alt="Efe avatar" style="width:48px;height:48px;border-radius:9999px;object-fit:cover">
+                  <div>
+                    <strong>Efe (8. Sınıf)</strong><div class="muted">e-Pusula ailesi</div>
+                  </div>
                 </div>
+                <p style="margin-top:10px">“LGS çalışmalarım e-Pusula ile çok daha planlı. Deneme analizleri harika!”</p>
               </div>
-              <p style="margin-top:10px">“LGS çalışmalarım e-Pusula ile çok daha planlı. Deneme analizleri harika!”</p>
-            </div>
-  
-            <div class="card">
-              <div style="display:flex;gap:12px;align-items:center">
-                <img src="assets/avatar-2.jpg" alt="Ayşe avatar" style="width:48px;height:48px;border-radius:9999px;object-fit:cover">
-                <div>
-                  <strong>Ayşe (Veli)</strong><div class="muted">e-Pusula ailesi</div>
+              <div class="card">
+                <div style="display:flex;gap:12px;align-items:center">
+                  <img src="assets/img/avatar-2.jpg" alt="Ayşe avatar" style="width:48px;height:48px;border-radius:9999px;object-fit:cover">
+                  <div>
+                    <strong>Ayşe (Veli)</strong><div class="muted">e-Pusula ailesi</div>
+                  </div>
                 </div>
+                <p style="margin-top:10px">“Mentorlarımız çok ilgili. Kızımın motivasyonu gözle görülür arttı.”</p>
               </div>
-              <p style="margin-top:10px">“Mentorlarımız çok ilgili. Kızımın motivasyonu gözle görülür arttı.”</p>
-            </div>
-  
-            <div class="card">
-              <div style="display:flex;gap:12px;align-items:center">
-                <img src="assets/avatar-3.jpg" alt="Deniz avatar" style="width:48px;height:48px;border-radius:9999px;object-fit:cover">
-                <div>
-                  <strong>Deniz (6. Sınıf)</strong><div class="muted">e-Pusula ailesi</div>
+              <div class="card">
+                <div style="display:flex;gap:12px;align-items:center">
+                  <img src="assets/img/avatar-3.jpg" alt="Deniz avatar" style="width:48px;height:48px;border-radius:9999px;object-fit:cover">
+                  <div>
+                    <strong>Deniz (6. Sınıf)</strong><div class="muted">e-Pusula ailesi</div>
+                  </div>
                 </div>
+                <p style="margin-top:10px">“STEM etkinlikleri çok eğlenceli ve öğretici. Projeler yapıyoruz!”</p>
               </div>
-              <p style="margin-top:10px">“STEM etkinlikleri çok eğlenceli ve öğretici. Projeler yapıyoruz!”</p>
             </div>
+            <button class="arrow right-arrow" aria-label="İleri">
+              <i class="fa fa-chevron-right"></i>
+            </button>
           </div>
         </div>
       </section>
@@ -331,6 +337,48 @@
           nav.classList.remove('active'); // 'active' sınıfını kaldır
         }
       });
+
+      // Testimonials Carousel
+const carousel = document.querySelector('.testimonials-carousel');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+
+if (carousel && leftArrow && rightArrow) {
+  function getScrollAmount() {
+    const cardWidth = carousel.querySelector('.card').offsetWidth;
+    const gap = 16;
+    return cardWidth + gap;
+  }
+
+  leftArrow.addEventListener('click', () => {
+    carousel.scrollBy({
+      left: -getScrollAmount(),
+      behavior: 'smooth'
+    });
+  });
+
+  rightArrow.addEventListener('click', () => {
+    carousel.scrollBy({
+      left: getScrollAmount(),
+      behavior: 'smooth'
+    });
+  });
+
+  function updateArrowVisibility() {
+    const scrollLeft = carousel.scrollLeft;
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+    leftArrow.style.opacity = scrollLeft <= 0 ? '0.5' : '1';
+    leftArrow.style.cursor = scrollLeft <= 0 ? 'default' : 'pointer';
+    
+    rightArrow.style.opacity = scrollLeft >= maxScroll - 1 ? '0.5' : '1';
+    rightArrow.style.cursor = scrollLeft >= maxScroll - 1 ? 'default' : 'pointer';
+  }
+
+  carousel.addEventListener('scroll', updateArrowVisibility);
+  window.addEventListener('resize', updateArrowVisibility);
+  updateArrowVisibility();
+}
     </script>
 
   </body>
