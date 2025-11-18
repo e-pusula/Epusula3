@@ -618,6 +618,7 @@ footer .container {
   .nav.active {
     right: 0;
     display: flex;
+    padding-top: 100px;
   }
 
   #about .badges {
