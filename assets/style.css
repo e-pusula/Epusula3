@@ -526,6 +526,12 @@ header {
   margin: 0;
 }
 
+.program-subtitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
 .program-features {
   list-style: none;
   padding: 0;
