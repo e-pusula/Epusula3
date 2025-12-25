@@ -738,7 +738,7 @@ header {
 
 .teacher-photo img {
   width: 140px;
-  height: 140px;
+  height: 180px;
   border-radius: 12px;
   object-fit: cover;
   border: 3px solid var(--primary);
@@ -746,11 +746,16 @@ header {
 }
 
 .teacher-photo h4 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--fg);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), #3B82F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-align: center;
   margin: 0;
+  letter-spacing: 0.5px;
 }
 
 .teacher-info {
