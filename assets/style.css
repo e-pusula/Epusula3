@@ -816,15 +816,13 @@ header {
 
   .teacher-info ul li {
     text-align: left;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 4px;
   }
 
   .teacher-info ul li strong {
-    display: block;
     color: var(--primary);
     font-size: 0.85rem;
-    margin-bottom: 2px;
   }
 
   .teachers-left-arrow,
