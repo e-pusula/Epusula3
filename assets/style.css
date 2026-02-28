@@ -945,3 +945,152 @@ footer .container {
     grid-template-columns: 1fr;
   }
 }
+
+/* ========== FIXED ACTION BUTTONS ========== */
+.fixed-action-buttons {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 9999;
+}
+
+.fab-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  font-size: 24px;
+}
+
+.fab-text {
+  position: absolute;
+  right: 70px;
+  background-color: var(--fg);
+  color: var(--bg);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  transform: translateX(10px);
+  pointer-events: none;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Tooltip Arrow */
+.fab-text::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+  border-width: 6px 0 6px 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--fg);
+}
+
+.fab-btn:hover .fab-text {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.fab-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.fab-apply {
+  background: var(--primary);
+}
+
+.fab-call {
+  background: #3B82F6;
+}
+
+.fab-whatsapp {
+  background: #25D366;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 75px;
+  }
+
+  .fixed-action-buttons {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+    padding: 12px 0 16px;
+    gap: 0;
+  }
+
+  .fab-btn {
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    color: var(--muted);
+    box-shadow: none;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 20px;
+    background: transparent !important;
+    transition: color 0.2s ease;
+    flex: 1;
+    text-align: center;
+  }
+
+  .fab-apply {
+    color: var(--primary);
+  }
+
+  .fab-call {
+    color: #3B82F6;
+  }
+
+  .fab-whatsapp {
+    color: #25D366;
+  }
+
+  .fab-btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .fab-text {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    font-size: 11px;
+    font-weight: 500;
+    box-shadow: none;
+  }
+
+  .fab-text::after {
+    display: none;
+  }
+}
