@@ -1,0 +1,11 @@
+# APK dosyalarinin dogru sekilde indirilmesi icin (Hostinger / Apache / LiteSpeed)
+
+# Android APK icin dogru MIME tipi
+AddType application/vnd.android.package-archive .apk
+
+# Tarayicida acmak yerine indirmeye zorla
+<IfModule mod_headers.c>
+  <FilesMatch "\.apk$">
+    Header set Content-Disposition "attachment"
+  </FilesMatch>
+</IfModule>
