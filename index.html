@@ -35,7 +35,7 @@
       "description": "LGS hazırlık, Matematik Olimpiyatı ve STEM programları.",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+90 551 842 0888",
+        "telephone": "+90 552 130 90 58",
         "contactType": "customer service",
         "email": "epusula.akademi@gmail.com"
       }
@@ -45,6 +45,24 @@
 
 <body>
   <a href="#main" style="position:absolute;left:-9999px">İçeriğe atla</a>
+
+  <!-- Kamp Duyuru Bildirimi -->
+  <div id="campBanner" class="camp-banner" role="region" aria-label="Kamp duyurusu">
+    <div class="camp-banner-inner">
+      <span class="camp-banner-badge">YENİ</span>
+      <p class="camp-banner-text">
+        <span class="camp-banner-long"><strong>Okula Dönüş Eğitim Kampı</strong> kayıtları başladı — tamamen
+          <strong>ücretsiz</strong>, online. </span>
+        <span class="camp-banner-short"><strong>Ücretsiz Okula Dönüş Kampı</strong> — </span>
+        <span class="camp-banner-urgent">Kontenjan sınırlı!</span>
+      </p>
+      <a href="#camp" class="camp-banner-cta">Hemen Katıl</a>
+      <button type="button" class="camp-banner-close" onclick="closeCampBanner()" aria-label="Duyuruyu kapat">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </div>
+
 
   <header>
     <div class="nav-box">
@@ -56,6 +74,7 @@
         <span></span>
       </div>
       <ul class="nav">
+        <li><a href="#camp" class="nav-camp">Kamp</a></li>
         <li><a href="#about">Hakkımızda</a></li>
         <li><a href="#programs">Programlar</a></li>
         <li><a href="#teachers">Eğitmenlerimiz</a></li>
@@ -99,6 +118,53 @@
           </div>
           <div>
             <img src="assets/img/homepage.jpg" alt="e-Pusula kahraman görseli">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Okula Dönüş Eğitim Kampı -->
+    <section id="camp" class="section camp-section">
+      <div class="container">
+        <div class="camp-card">
+          <div class="camp-poster">
+            <a href="https://chat.whatsapp.com/Cqpw8DofHaA3cYWt5XGvvl" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/kamp-afis.jpg"
+                alt="e-Pusula Okula Dönüş Eğitim Kampı afişi: 30 Ağustos - 7 Eylül, online ve ücretsiz">
+            </a>
+          </div>
+
+          <div class="camp-content">
+            <span class="camp-tag"><i class="fa-solid fa-gift"></i> Tamamen Ücretsiz &middot; Kontenjan Sınırlı</span>
+            <h2 class="camp-title">Okula Dönüş <span class="hero-title-highlight">Eğitim Kampı</span> Başlıyor</h2>
+            <p class="muted camp-lead">
+              2. sınıftan 8. sınıfa geçen <strong>tüm öğrenciler</strong> için tamamen ücretsiz online eğitim kampı!
+              Matematik, İngilizce, Fen, LGS hazırlık, olimpiyatlar ve dahasıyla geçen dönem öğrendiklerini tekrar et,
+              eksiklerini tamamla ve okula hazır başla 🚀
+            </p>
+
+            <ul class="camp-facts">
+              <li><i class="fa-solid fa-calendar-days"></i> 30 Ağustos - 7 Eylül</li>
+              <li><i class="fa-solid fa-wifi"></i> Online</li>
+              <li><i class="fa-solid fa-users"></i> 2 - 8. sınıf</li>
+              <li><i class="fa-solid fa-tag"></i> Ücretsiz</li>
+            </ul>
+
+            <div class="camp-topics">
+              <span>Matematik</span><span>İngilizce</span><span>Fen Bilimleri</span><span>Programlama</span>
+              <span>Olimpiyatlar</span><span>LGS Derece Programları</span>
+            </div>
+
+            <a class="camp-wa-btn" href="https://chat.whatsapp.com/Cqpw8DofHaA3cYWt5XGvvl" target="_blank"
+              rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>
+                <strong>WhatsApp Kamp Grubuna Katıl</strong>
+                <small>Tek tıkla katıl, kontenjanı kaçırma</small>
+              </span>
+            </a>
+            <p class="camp-note">Eğlenerek öğren, kendini geliştir!</p>
           </div>
         </div>
       </div>
@@ -595,7 +661,7 @@
         </p>
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
           <a href="#application-form" class="button-primary">Başvuru Formu</a>
-          <a href="tel:+905518420888" class="button-primary btn-outline">
+          <a href="tel:+905521309058" class="button-primary btn-outline">
             <i class="fa-solid fa-phone-volume"></i> Hemen Ara
           </a>
         </div>
@@ -613,14 +679,14 @@
             </p>
             <div class="card contact-gradient" style="margin-top:12px">
               <p style="font-weight:700;margin:0">Telefon:</p>
-              <p style="margin:4px 0 8px 0">+90 551 842 0888</p>
+              <p style="margin:4px 0 8px 0">+90 552 130 90 58</p>
               <p style="font-weight:700;margin:0">E-posta:</p>
               <p style="margin:4px 0 8px 0">info@epusula.net</p>
               <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
-                <a href="tel:+905518420888" class="button-primary">
+                <a href="tel:+905521309058" class="button-primary">
                   <i class="fa-solid fa-phone-volume"></i> Hemen Ara
                 </a>
-                <a href="https://wa.me/905518420888" target="_blank" class="button-primary contact-yellow">WhatsApp</a>
+                <a href="https://wa.me/905521309058" target="_blank" class="button-primary contact-yellow">WhatsApp</a>
               </div>
             </div>
 
@@ -672,7 +738,7 @@
       </a>
       <div class="muted">© <span id="year"></span> e-Pusula Akademi. Tüm hakları saklıdır.</div>
       <div style="display:flex;gap:12px">
-        <a href="tel:+905518420888">+90 551 842 0888</a>
+        <a href="tel:+905521309058">+90 552 130 90 58</a>
         <a href="mailto:info@epusula.net">info@epusula.net</a>
       </div>
     </div>
@@ -859,6 +925,40 @@
         }
       });
     });
+
+    /* ===== Kamp duyuru bildirimi ===== */
+    (function () {
+      const banner = document.getElementById('campBanner');
+      if (!banner) return;
+
+      const STORAGE_KEY = 'campBannerClosed';
+      if (sessionStorage.getItem(STORAGE_KEY) === '1') return;
+
+      function applyOffset() {
+        const h = banner.offsetHeight;
+        document.body.style.setProperty('--camp-banner-h', h + 'px');
+        document.body.style.paddingTop = h + 'px';
+      }
+
+      // Sayfa açıldıktan kısa süre sonra yukarıdan kayarak gelsin
+      setTimeout(function () {
+        document.body.classList.add('camp-banner-open');
+        banner.classList.add('show');
+        applyOffset();
+      }, 900);
+
+      window.addEventListener('resize', function () {
+        if (banner.classList.contains('show')) applyOffset();
+      });
+
+      window.closeCampBanner = function () {
+        banner.classList.remove('show');
+        document.body.classList.remove('camp-banner-open');
+        document.body.style.paddingTop = '';
+        document.body.style.removeProperty('--camp-banner-h');
+        sessionStorage.setItem(STORAGE_KEY, '1');
+      };
+    })();
   </script>
 
   <!-- Fixed Buttons -->
@@ -867,11 +967,11 @@
       <i class="fa-solid fa-file-signature"></i>
       <span class="fab-text">Başvur</span>
     </a>
-    <a href="tel:+905518420888" class="fab-btn fab-call">
+    <a href="tel:+905521309058" class="fab-btn fab-call">
       <i class="fa-solid fa-phone-volume"></i>
       <span class="fab-text">Ara</span>
     </a>
-    <a href="https://wa.me/905518420888" target="_blank" class="fab-btn fab-whatsapp">
+    <a href="https://wa.me/905521309058" target="_blank" class="fab-btn fab-whatsapp">
       <i class="fa-brands fa-whatsapp"></i>
       <span class="fab-text">Whatsapp</span>
     </a>

@@ -1283,3 +1283,311 @@ footer .container {
     display: none;
   }
 }
+/* ========== KAMP DUYURU BİLDİRİMİ ========== */
+.camp-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  background: linear-gradient(90deg, #16a34a, #059669, #16a34a);
+  background-size: 200% 100%;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  transform: translateY(-100%);
+  transition: transform 0.55s cubic-bezier(0.34, 1.4, 0.64, 1);
+  animation: campGradient 6s linear infinite;
+}
+
+.camp-banner.show {
+  transform: translateY(0);
+}
+
+@keyframes campGradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.camp-banner-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 10px 48px 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.camp-banner-badge {
+  background: var(--yellow);
+  color: #1f2937;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  animation: campBlink 1.2s ease-in-out infinite;
+}
+
+@keyframes campBlink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.94); }
+}
+
+.camp-banner-text {
+  font-size: 15px;
+  margin: 0;
+}
+
+.camp-banner-urgent {
+  color: var(--yellow);
+  font-weight: 700;
+  animation: campBlink 1.2s ease-in-out infinite;
+}
+
+.camp-banner-cta {
+  background: #fff;
+  color: #15803d;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  animation: campPulse 2s ease-out infinite;
+}
+
+@keyframes campPulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(255, 255, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+.camp-banner-cta:hover {
+  transform: translateY(-2px);
+}
+
+.camp-banner-close {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.85;
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+.camp-banner-close:hover {
+  opacity: 1;
+}
+
+/* Bildirim açıkken header'ı aşağı it */
+body.camp-banner-open header {
+  top: var(--camp-banner-h, 0px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .camp-banner,
+  .camp-banner-badge,
+  .camp-banner-urgent,
+  .camp-banner-cta {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* ========== KAMP BÖLÜMÜ ========== */
+.camp-section {
+  scroll-margin-top: 140px;
+}
+
+.camp-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 40px;
+  align-items: center;
+  background: linear-gradient(160deg, #f8fafc, #eef2ff);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+
+.camp-poster img {
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.camp-poster img:hover {
+  transform: scale(1.02);
+}
+
+.camp-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.camp-title {
+  text-align: left;
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.camp-lead {
+  max-width: 60ch;
+  margin-bottom: 20px;
+}
+
+.camp-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-bottom: 18px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.camp-facts i {
+  color: var(--primary);
+  margin-right: 6px;
+}
+
+.camp-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+
+.camp-topics span {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.camp-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
+  padding: 16px 30px;
+  border-radius: 16px;
+  font-size: 18px;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: campPulseGreen 2.4s ease-out infinite;
+}
+
+@keyframes campPulseGreen {
+  0% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.55); }
+  70% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4), 0 0 0 18px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.camp-wa-btn:hover {
+  transform: translateY(-3px);
+}
+
+.camp-wa-btn i {
+  font-size: 34px;
+}
+
+.camp-wa-btn small {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.camp-note {
+  margin-top: 14px;
+  color: #b91c1c;
+  font-family: Caveat, cursive;
+  font-size: 22px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .camp-wa-btn {
+    animation: none;
+  }
+}
+
+@media (max-width: 958px) {
+  .camp-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 20px;
+  }
+
+  .camp-title {
+    font-size: 26px;
+  }
+
+  .camp-banner-text {
+    font-size: 13px;
+  }
+
+  .camp-banner-inner {
+    padding: 8px 40px 8px 12px;
+    gap: 8px;
+  }
+
+  .camp-wa-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+}
+
+.nav-camp {
+  white-space: nowrap;
+  font-weight: 700;
+  color: #16a34a !important;
+}
+
+.camp-banner-short {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .camp-banner-long {
+    display: none;
+  }
+
+  .camp-banner-short {
+    display: inline;
+  }
+
+  .camp-banner-inner {
+    gap: 6px;
+  }
+
+  .camp-banner-cta {
+    padding: 5px 12px;
+    font-size: 13px;
+  }
+}
