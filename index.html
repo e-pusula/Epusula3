@@ -46,24 +46,6 @@
 <body>
   <a href="#main" style="position:absolute;left:-9999px">İçeriğe atla</a>
 
-  <!-- Kamp Duyuru Bildirimi -->
-  <div id="campBanner" class="camp-banner" role="region" aria-label="Kamp duyurusu">
-    <div class="camp-banner-inner">
-      <span class="camp-banner-badge">YENİ</span>
-      <p class="camp-banner-text">
-        <span class="camp-banner-long"><strong>Okula Dönüş Eğitim Kampı</strong> kayıtları başladı — tamamen
-          <strong>ücretsiz</strong>, online. </span>
-        <span class="camp-banner-short"><strong>Ücretsiz Okula Dönüş Kampı</strong> — </span>
-        <span class="camp-banner-urgent">Kontenjan sınırlı!</span>
-      </p>
-      <a href="#camp" class="camp-banner-cta">Hemen Katıl</a>
-      <button type="button" class="camp-banner-close" onclick="closeCampBanner()" aria-label="Duyuruyu kapat">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-    </div>
-  </div>
-
-
   <header>
     <div class="nav-box">
       <a href="#" class="logo">
@@ -74,12 +56,11 @@
         <span></span>
       </div>
       <ul class="nav">
-        <li><a href="#camp" class="nav-camp">Kamp</a></li>
+        <li><a href="#camp" class="nav-camp">Kamplarımız</a></li>
         <li><a href="#about">Hakkımızda</a></li>
         <li><a href="#programs">Programlar</a></li>
         <li><a href="#teachers">Eğitmenlerimiz</a></li>
         <li><a href="#system">Sistemimiz</a></li>
-        <li><a href="#app">Uygulama</a></li>
         <li><a href="#contact">İletişim</a></li>
         <li><a href="https://forms.gle/o2jsCjgq6iahDkEj6" target="_blank">Başvur</a></li>
         <li><a href="#trial"><span style="color:#FFD700" class="handwriting">Ücretsiz</span> Deneme Dersleri</a></li>
@@ -123,52 +104,6 @@
       </div>
     </section>
 
-
-    <!-- Okula Dönüş Eğitim Kampı -->
-    <section id="camp" class="section camp-section">
-      <div class="container">
-        <div class="camp-card">
-          <div class="camp-poster">
-            <a href="https://chat.whatsapp.com/Cqpw8DofHaA3cYWt5XGvvl" target="_blank" rel="noopener noreferrer">
-              <img src="assets/img/kamp-afis.jpg"
-                alt="e-Pusula Okula Dönüş Eğitim Kampı afişi: 30 Ağustos - 7 Eylül, online ve ücretsiz">
-            </a>
-          </div>
-
-          <div class="camp-content">
-            <span class="camp-tag"><i class="fa-solid fa-gift"></i> Tamamen Ücretsiz &middot; Kontenjan Sınırlı</span>
-            <h2 class="camp-title">Okula Dönüş <span class="hero-title-highlight">Eğitim Kampı</span> Başlıyor</h2>
-            <p class="muted camp-lead">
-              2. sınıftan 8. sınıfa geçen <strong>tüm öğrenciler</strong> için tamamen ücretsiz online eğitim kampı!
-              Matematik, İngilizce, Fen, LGS hazırlık, olimpiyatlar ve dahasıyla geçen dönem öğrendiklerini tekrar et,
-              eksiklerini tamamla ve okula hazır başla 🚀
-            </p>
-
-            <ul class="camp-facts">
-              <li><i class="fa-solid fa-calendar-days"></i> 30 Ağustos - 7 Eylül</li>
-              <li><i class="fa-solid fa-wifi"></i> Online</li>
-              <li><i class="fa-solid fa-users"></i> 2 - 8. sınıf</li>
-              <li><i class="fa-solid fa-tag"></i> Ücretsiz</li>
-            </ul>
-
-            <div class="camp-topics">
-              <span>Matematik</span><span>İngilizce</span><span>Fen Bilimleri</span><span>Programlama</span>
-              <span>Olimpiyatlar</span><span>LGS Derece Programları</span>
-            </div>
-
-            <a class="camp-wa-btn" href="https://chat.whatsapp.com/Cqpw8DofHaA3cYWt5XGvvl" target="_blank"
-              rel="noopener noreferrer">
-              <i class="fa-brands fa-whatsapp"></i>
-              <span>
-                <strong>WhatsApp Kamp Grubuna Katıl</strong>
-                <small>Tek tıkla katıl, kontenjanı kaçırma</small>
-              </span>
-            </a>
-            <p class="camp-note">Eğlenerek öğren, kendini geliştir!</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- About -->
     <section id="about" class="section">
@@ -347,113 +282,165 @@
       </div>
     </section>
 
-    <!-- App Download -->
-    <section id="app" class="section">
+    <!-- Teachers -->
+    <section id="teachers" class="section">
       <div class="container">
-        <h2>e-Pusula Soru Uygulaması <i class="fa-solid fa-mobile-screen-button" style="color:var(--primary)"></i></h2>
-        <p class="programs-subtitle">Her gün yeni sorular çöz, gelişimini takip et. Uygulamayı telefonuna indir!</p>
-        <div class="app-grid">
-          <!-- Sol: Uygulama tanıtımı + indirme -->
-          <div class="app-card app-download">
-            <div class="app-icon">
-              <img src="assets/img/logo.png" alt="e-Pusula Uygulaması">
+        <h2>Eğitmenlerimiz</h2>
+        <div class="teachers-wrapper">
+          <button class="arrow teachers-left-arrow">
+            <i class="fa fa-chevron-left"></i>
+          </button>
+          <div class="teachers-carousel">
+            <!-- Furkan Çifçi -->
+            <div class="teacher-card">
+              <div class="teacher-photo">
+                <img src="assets/img/furkan-cifci.jpeg" alt="Furkan Çifçi">
+                <h4>Furkan</h4>
+              </div>
+              <div class="teacher-info">
+                <ul>
+                  <li><i class="fa-solid fa-flag"></i> <strong>Milli Takım:</strong> Uluslararası Matematik
+                    Olimpiyatları (Kanguru)</li>
+                  <li><i class="fa-solid fa-medal"></i> <strong>Altın Madalya:</strong> Asya Matematik Olimpiyatları
+                    (AIMO), Japonya</li>
+                  <li><i class="fa-solid fa-trophy"></i> <strong>Dünya 3.'lüğü:</strong> Dünya Matematik Yarışması
+                    (WMI),
+                    Tayland</li>
+                  <li><i class="fa-solid fa-graduation-cap"></i> <strong>Stajyer:</strong> Koç Üniversitesi</li>
+                </ul>
+              </div>
             </div>
-            <h3>e-Pusula</h3>
-            <p class="muted">Android telefonlar için günlük soru çözme uygulaması.</p>
-            <ul class="app-features">
-              <li><i class="fa-solid fa-circle-check"></i> Her gün yeni sorular</li>
-              <li><i class="fa-solid fa-circle-check"></i> Anında sonuç ve çözümler</li>
-              <li><i class="fa-solid fa-circle-check"></i> Gelişimini takip et</li>
-            </ul>
-            <a class="button-primary app-download-btn" href="download/epusula.apk" download="e-Pusula.apk">
-              <i class="fa-solid fa-download"></i> Uygulamayı İndir
-            </a>
-            <p class="muted app-meta"><i class="fa-brands fa-android"></i> Android • APK • ~5 MB</p>
-          </div>
 
-          <!-- Sağ: Kurulum adımları -->
-          <div class="app-card app-steps">
-            <h3><i class="fa-solid fa-list-check" style="color:var(--primary)"></i> Nasıl Kurulur?</h3>
-            <ol class="install-steps">
-              <li>
-                <span class="step-num">1</span>
-                <div>
-                  <strong>İndir</strong>
-                  <p class="muted">Soldaki <em>"Uygulamayı İndir"</em> butonuna dokun. İndirme otomatik başlar.</p>
-                </div>
-              </li>
-              <li>
-                <span class="step-num">2</span>
-                <div>
-                  <strong>Dosyayı aç</strong>
-                  <p class="muted">İndirme bitince bildirime ya da "İndirilenler" klasöründeki <em>e-Pusula.apk</em>
-                    dosyasına dokun.</p>
-                </div>
-              </li>
-              <li>
-                <span class="step-num">3</span>
-                <div>
-                  <strong>İzin ver</strong>
-                  <p class="muted">"Bilinmeyen kaynaklara izin ver" uyarısı çıkarsa <em>Ayarlar</em>'a git ve
-                    tarayıcın/dosya yöneticin için bu izni aç.</p>
-                </div>
-              </li>
-              <li>
-                <span class="step-num">4</span>
-                <div>
-                  <strong>Kur</strong>
-                  <p class="muted"><em>"Yükle"</em> butonuna dokun ve kurulumun bitmesini bekle.</p>
-                </div>
-              </li>
-              <li>
-                <span class="step-num">5</span>
-                <div>
-                  <strong>Aç ve çözmeye başla</strong>
-                  <p class="muted">Uygulamayı aç, her gün yeni sorularla pratik yap! 🎯</p>
-                </div>
-              </li>
-            </ol>
-            <p class="app-note"><i class="fa-solid fa-circle-info"></i> Uygulama Google Play dışından kurulduğu için
-              telefonun bir güvenlik uyarısı gösterebilir. Bu normaldir, güvenle devam edebilirsin.</p>
+            <!-- Fatih -->
+            <div class="teacher-card">
+              <div class="teacher-photo">
+                <img src="assets/img/fatih.jpeg" alt="Fatih">
+                <h4>Fatih</h4>
+              </div>
+              <div class="teacher-info">
+                <ul>
+                  <li><i class="fa-solid fa-flag"></i> <strong>Milli Takım:</strong> Uluslararası Bilim ve Mühendislik
+                    Yarışması (ISEF)</li>
+                  <li><i class="fa-solid fa-chart-line"></i> <strong>YKS Sayısal:</strong> Türkiye 150.'si, Bogazici
+                    Universitesi Bilgisayar Muh.</li>
+                  <li><i class="fa-solid fa-school"></i> <strong>LGS ≈500 Puan:</strong> Kabataş Erkek Lisesi</li>
+                  <li><i class="fa-solid fa-award"></i> <strong>Türkiye 1.'liği:</strong> TÜBİTAK Proje Yarışması
+                    (Matematik)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Reyyan -->
+            <div class="teacher-card">
+              <div class="teacher-photo">
+                <img src="assets/img/reyyan.png" alt="Reyyan">
+                <h4>Reyyan</h4>
+              </div>
+              <div class="teacher-info">
+                <ul>
+                  <li><i class="fa-solid fa-medal"></i> <strong>ISEF:</strong> Kimya Dünya 4.’lüğü</li>
+                  <li><i class="fa-solid fa-flag"></i> <strong>TÜBİTAK:</strong> Milli Takım</li>
+                  <li><i class="fa-solid fa-school"></i> <strong>LGS:</strong> %0,2</li>
+                  <li><i class="fa-solid fa-award"></i> Cumhurbaşkanlığı Yetişen Genç Yetenek Ödülü</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Osman -->
+            <div class="teacher-card">
+              <div class="teacher-photo">
+                <img src="assets/img/osman.jpeg" alt="Osman">
+                <h4>Osman</h4>
+              </div>
+              <div class="teacher-info">
+                <ul>
+                  <li><i class="fa-solid fa-plane"></i> <strong>Türkiye Birinciliği:</strong> TEKNOFEST İnsansız Hava
+                    Araçları Yarışması</li>
+                  <li><i class="fa-solid fa-school"></i> <strong>LGS %0,4:</strong> Kartal Anadolu İmam Hatip Lisesi
+                  </li>
+                  <li><i class="fa-solid fa-medal"></i> <strong>Bronz Madalya:</strong> Ulusal Antalya Matematik
+                    Olimpiyatları</li>
+                  <li><i class="fa-solid fa-award"></i> <strong>Bölge Birinciliği:</strong> TÜBİTAK Proje Yarışması
+                    (Matematik)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Melike Rana -->
+            <div class="teacher-card">
+              <div class="teacher-photo">
+                <img src="assets/img/melike-rana.jpeg" alt="Melike Rana">
+                <h4>Melike Rana</h4>
+              </div>
+              <div class="teacher-info">
+                <ul>
+                  <li><i class="fa-solid fa-graduation-cap"></i> <strong>Üniversite:</strong> İstanbul Teknik Üniversitesi Endüstri Mühendisliği</li>
+                  <li><i class="fa-solid fa-globe"></i> <strong>IB:</strong> 42/45</li>
+                  <li><i class="fa-solid fa-award"></i> Dünyanın en iyi 10 üniversitesinden kabul</li>
+                  <li><i class="fa-solid fa-school"></i> <strong>LGS %0,2:</strong> Kartal Anadolu İmam Hatip Lisesi</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Mustafa Talip -->
+            <div class="teacher-card">
+              <div class="teacher-photo">
+                <img src="assets/img/mustafa-talip.png" alt="Mustafa Talip">
+                <h4>Mustafa Talip</h4>
+              </div>
+              <div class="teacher-info">
+                <ul>
+                  <li><i class="fa-solid fa-graduation-cap"></i> <strong>Üniversite:</strong> Kocaeli Üniversitesi Mekanik Mühendisliği</li>
+                  <li><i class="fa-solid fa-certificate"></i> <strong>Cambridge:</strong> IGCE Programı</li>
+                  <li><i class="fa-solid fa-school"></i> <strong>LGS:</strong> %0,4</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- More Teachers Coming -->
+            <div class="teacher-card more-teachers-card">
+              <div class="teacher-photo">
+                <img src="assets/img/unkown-man.png" alt="Daha Fazla Eğitmen">
+                <h4>Ve Daha Fazlası...</h4>
+              </div>
+              <div class="teacher-info">
+                <ul>
+                  <li><i class="fa-solid fa-users"></i> <strong>Ekibimiz büyüyor!</strong> Yeni eğitmenlerimiz de
+                    sizlerle.</li>
+                  <li><i class="fa-solid fa-star"></i> <strong>Alanında uzman</strong> kadromuzla tanışmak için bizi
+                    takip edin.</li>
+                </ul>
+              </div>
+            </div>
           </div>
+          <button class="arrow teachers-right-arrow">
+            <i class="fa fa-chevron-right"></i>
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- Advantages -->
-    <section id="advantages" class="section">
+    <!-- ePusula Kampları -->
+    <section id="camp" class="section camp-section" aria-labelledby="camp-title">
       <div class="container">
-        <h2>Online Eğitimin Avantajları</h2>
-        <div class="grid-3">
-          <div class="card">
-            <i class="icon-box gradient-yellow-blue fa-solid fa-users"></i>
-            <h4>Yeni Arkadaşlıklar</h4>
-            <p class="muted">Disiplinli topluluklarla birlikte, motive edici bir öğrenme ortamı.</p>
-          </div>
-          <div class="card">
-            <i class="icon-box gradient-purple-blue fa-solid fa-camera"></i>
-            <h4>Rahat Giriş, Kameralar Açık</h4>
-            <p class="muted">Google Classroom ve canlı derslerle düzenli, etkileşimli eğitim.</p>
-          </div>
-          <div class="card">
-            <i class="icon-box gradient-yellow-blue fa-solid fa-medal"></i>
-            <h4>Uzman Kadro</h4>
-            <p class="muted">Madalyalı, deneyimli mentorlarla güçlü bir rehberlik.</p>
-          </div>
-          <div class="card">
-            <i class="icon-box gradient-purple-blue fa-solid fa-book-open"></i>
-            <h4>Profesyonel Müfredat</h4>
-            <p class="muted">Okul müfredatından farklı, zenginleştirilmiş ve seviyeye uygun içerik.</p>
-          </div>
-          <div class="card">
-            <i class="icon-box gradient-blue-purple fa-solid fa-calendar"></i>
-            <h4>Planlı Program</h4>
-            <p class="muted">Haftalık ders akışı, ödev ve deneme takipleriyle net süreç.</p>
-          </div>
-          <div class="card">
-            <i class="icon-box gradient-blue-purple fa-solid fa-user-shield"></i>
-            <h4>Şeffaf ve Güvenli</h4>
-            <p class="muted">Veliler için net raporlar ve kayıtlarla şeffaf süreç yönetimi.</p>
+        <div class="camp-card">
+          <div class="camp-content">
+            <span class="camp-tag"><i class="fa-solid fa-gift"></i> Ücretsiz Eğitim Kampları</span>
+            <h2 id="camp-title" class="camp-title">ePusula <span class="hero-title-highlight">Kampları</span></h2>
+            <p class="muted camp-lead">
+              Okula Dönüş Eğitim Kampımız tamamlandı. Yeni ücretsiz kamplarımızdan ve eğitim
+              duyurularımızdan haberdar olmak için WhatsApp grubumuza katılabilirsiniz.
+            </p>
+
+            <a class="camp-wa-btn" href="https://chat.whatsapp.com/Cq57UGCNT9LC4LGmphQPQW?mode=gi_t" target="_blank"
+              rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>
+                <strong>WhatsApp Grubuna Katıl</strong>
+                <small>Yeni kamplardan haberdar ol</small>
+              </span>
+            </a>
+            <p class="camp-note">Birlikte öğrenmeye devam ediyoruz!</p>
           </div>
         </div>
       </div>
@@ -505,149 +492,41 @@
       </div>
     </section>
 
-    <!-- Teachers -->
-    <section id="teachers" class="section">
+    <!-- Advantages -->
+    <section id="advantages" class="section">
       <div class="container">
-        <h2>Eğitmenlerimiz</h2>
-        <div class="teachers-wrapper">
-          <button class="arrow teachers-left-arrow">
-            <i class="fa fa-chevron-left"></i>
-          </button>
-          <div class="teachers-carousel">
-            <!-- Furkan Çifçi -->
-            <div class="teacher-card">
-              <div class="teacher-photo">
-                <img src="assets/img/furkan-cifci.jpeg" alt="Furkan Çifçi">
-                <h4>Furkan</h4>
-              </div>
-              <div class="teacher-info">
-                <ul>
-                  <li><i class="fa-solid fa-flag"></i> <strong>Milli Takım:</strong> Uluslararası Matematik
-                    Olimpiyatları (Kanguru)</li>
-                  <li><i class="fa-solid fa-medal"></i> <strong>Altın Madalya:</strong> Asya Matematik Olimpiyatları
-                    (AIMO), Japonya</li>
-                  <li><i class="fa-solid fa-trophy"></i> <strong>Dünya 3.'lüğü:</strong> Dünya Matematik Yarışması
-                    (WMI),
-                    Tayland</li>
-                  <li><i class="fa-solid fa-graduation-cap"></i> <strong>Stajyer:</strong> Koç Üniversitesi</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Fatih -->
-            <div class="teacher-card">
-              <div class="teacher-photo">
-                <img src="assets/img/fatih.jpeg" alt="Fatih">
-                <h4>Fatih</h4>
-              </div>
-              <div class="teacher-info">
-                <ul>
-                  <li><i class="fa-solid fa-flag"></i> <strong>Milli Takım:</strong> Uluslararası Bilim ve Mühendislik
-                    Yarışması (ISEF)</li>
-                  <li><i class="fa-solid fa-chart-line"></i> <strong>YKS Sayısal:</strong> Türkiye 150.'si, Bogazici
-                    Universitesi Bilgisayar Muh.</li>
-                  <li><i class="fa-solid fa-school"></i> <strong>LGS ≈500 Puan:</strong> Kabataş Erkek Lisesi</li>
-                  <li><i class="fa-solid fa-award"></i> <strong>Türkiye 1.'liği:</strong> TÜBİTAK Proje Yarışması
-                    (Matematik)</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Zeynep Firdevs -->
-            <div class="teacher-card">
-              <div class="teacher-photo">
-                <img src="assets/img/Zeynep-Firdevs.jpeg" alt="Zeynep Firdevs">
-                <h4>Zeynep Firdevs</h4>
-              </div>
-              <div class="teacher-info">
-                <ul>
-                  <li><i class="fa-solid fa-graduation-cap"></i> <strong>YKS EA Türkiye 1.500.'sü:</strong> Galatasaray
-                    Üniversitesi</li>
-                  <li><i class="fa-solid fa-school"></i> <strong>LGS %0,3:</strong> Kartal Anadolu İmam Hatip Lisesi
-                  </li>
-                  <li><i class="fa-solid fa-globe"></i> <strong>IB Programı:</strong> Uluslararası Prestijli bir Diploma
-                    Programı</li>
-                  <li><i class="fa-solid fa-certificate"></i> <strong>IGCSE:</strong> Uluslararası Ortaöğretim Diploma
-                    Programı</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Osman -->
-            <div class="teacher-card">
-              <div class="teacher-photo">
-                <img src="assets/img/osman.jpeg" alt="Osman">
-                <h4>Osman</h4>
-              </div>
-              <div class="teacher-info">
-                <ul>
-                  <li><i class="fa-solid fa-plane"></i> <strong>Türkiye Birinciliği:</strong> TEKNOFEST İnsansız Hava
-                    Araçları Yarışması</li>
-                  <li><i class="fa-solid fa-school"></i> <strong>LGS %0,4:</strong> Kartal Anadolu İmam Hatip Lisesi
-                  </li>
-                  <li><i class="fa-solid fa-medal"></i> <strong>Bronz Madalya:</strong> Ulusal Antalya Matematik
-                    Olimpiyatları</li>
-                  <li><i class="fa-solid fa-award"></i> <strong>Bölge Birinciliği:</strong> TÜBİTAK Proje Yarışması
-                    (Matematik)</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Yusuf Mert -->
-            <div class="teacher-card">
-              <div class="teacher-photo">
-                <img src="assets/img/yusuf-mert.jpeg" alt="Yusuf Mert">
-                <h4>Yusuf Mert</h4>
-              </div>
-              <div class="teacher-info">
-                <ul>
-                  <li><i class="fa-solid fa-university"></i> <strong>Üniversite:</strong> Elektrik-Elektronik
-                    Mühendisliği – İstanbul Teknik Üniversitesi</li>
-                  <li><i class="fa-solid fa-chart-line"></i> <strong>YKS Sayısal:</strong> Türkiye 1.300.'sü</li>
-                  <li><i class="fa-solid fa-school"></i> <strong>LGS:</strong> %0,6 dilim</li>
-                  <li><i class="fa-solid fa-puzzle-piece"></i> <strong>Bölge Birinciliği:</strong> Zeka Oyunları 2024
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Osman Nuri -->
-            <div class="teacher-card">
-              <div class="teacher-photo">
-                <img src="assets/img/osman-nuri.jpeg" alt="Osman Nuri">
-                <h4>Osman Nuri</h4>
-              </div>
-              <div class="teacher-info">
-                <ul>
-                  <li><i class="fa-solid fa-medal"></i> <strong>Gümüş Madalya:</strong> Türkiye Matematik Yarışması</li>
-                  <li><i class="fa-solid fa-school"></i> <strong>LGS:</strong> ~500 Tam Puan</li>
-                  <li><i class="fa-solid fa-atom"></i> <strong>Fizik Olimpiyatları:</strong> 2 yıllık deneyim ve
-                    dereceler</li>
-                  <li><i class="fa-solid fa-trophy"></i> <strong>Dünya 8.'liği:</strong> Uluslararası Robotik Yarışması
-                    (MoNE)</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- More Teachers Coming -->
-            <div class="teacher-card more-teachers-card">
-              <div class="teacher-photo">
-                <img src="assets/img/unkown-man.png" alt="Daha Fazla Eğitmen">
-                <h4>Ve Daha Fazlası...</h4>
-              </div>
-              <div class="teacher-info">
-                <ul>
-                  <li><i class="fa-solid fa-users"></i> <strong>Ekibimiz büyüyor!</strong> Yeni eğitmenlerimiz de
-                    sizlerle.</li>
-                  <li><i class="fa-solid fa-star"></i> <strong>Alanında uzman</strong> kadromuzla tanışmak için bizi
-                    takip edin.</li>
-                </ul>
-              </div>
-            </div>
+        <h2>Online Eğitimin Avantajları</h2>
+        <div class="grid-3">
+          <div class="card">
+            <i class="icon-box gradient-yellow-blue fa-solid fa-users"></i>
+            <h4>Yeni Arkadaşlıklar</h4>
+            <p class="muted">Disiplinli topluluklarla birlikte, motive edici bir öğrenme ortamı.</p>
           </div>
-          <button class="arrow teachers-right-arrow">
-            <i class="fa fa-chevron-right"></i>
-          </button>
+          <div class="card">
+            <i class="icon-box gradient-purple-blue fa-solid fa-camera"></i>
+            <h4>Rahat Giriş, Kameralar Açık</h4>
+            <p class="muted">Google Classroom ve canlı derslerle düzenli, etkileşimli eğitim.</p>
+          </div>
+          <div class="card">
+            <i class="icon-box gradient-yellow-blue fa-solid fa-medal"></i>
+            <h4>Uzman Kadro</h4>
+            <p class="muted">Madalyalı, deneyimli mentorlarla güçlü bir rehberlik.</p>
+          </div>
+          <div class="card">
+            <i class="icon-box gradient-purple-blue fa-solid fa-book-open"></i>
+            <h4>Profesyonel Müfredat</h4>
+            <p class="muted">Okul müfredatından farklı, zenginleştirilmiş ve seviyeye uygun içerik.</p>
+          </div>
+          <div class="card">
+            <i class="icon-box gradient-blue-purple fa-solid fa-calendar"></i>
+            <h4>Planlı Program</h4>
+            <p class="muted">Haftalık ders akışı, ödev ve deneme takipleriyle net süreç.</p>
+          </div>
+          <div class="card">
+            <i class="icon-box gradient-blue-purple fa-solid fa-user-shield"></i>
+            <h4>Şeffaf ve Güvenli</h4>
+            <p class="muted">Veliler için net raporlar ve kayıtlarla şeffaf süreç yönetimi.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -692,6 +571,9 @@
 
             <div style="margin-top:24px;">
               <h3 style="margin-bottom: 12px; text-align: center; font-size: 1.5rem;">Türkiye'nin Dört Bir Yanından</h3>
+              <p class="muted" style="font-size:14px; text-align:center; margin-bottom:12px;">
+                Bugüne kadar Türkiye’nin dört bir yanından <strong>783 kişiye ücretsiz eğitim</strong> verdik.
+              </p>
               <img src="assets/img/map.jpeg" alt="Türkiye Öğrenci Haritası"
                 style="border-radius: 12px; width: 100%; box-shadow: var(--shadow); margin-bottom: 16px;">
 
@@ -721,7 +603,10 @@
             </div>
           </div>
           <div id="application-form" class="sign-up-card" style="padding:0; overflow:hidden;">
-            <iframe
+            <div style="padding:20px; text-align:center;">
+              <h3 style="margin-bottom:12px;">Kayıt ve Başvuru Formu</h3>
+            </div>
+            <iframe title="e-Pusula Kayıt ve Başvuru Formu"
               src="https://docs.google.com/forms/d/e/1FAIpQLSeF6kbZUWuX-5JUiB82K83uENhT1jA0Ik9IaKxtquqWhi-sPQ/viewform?embedded=true"
               width="100%" height="1150" frameborder="0" marginheight="0" marginwidth="0">Yükleniyor…</iframe>
           </div>
@@ -926,39 +811,6 @@
       });
     });
 
-    /* ===== Kamp duyuru bildirimi ===== */
-    (function () {
-      const banner = document.getElementById('campBanner');
-      if (!banner) return;
-
-      const STORAGE_KEY = 'campBannerClosed';
-      if (sessionStorage.getItem(STORAGE_KEY) === '1') return;
-
-      function applyOffset() {
-        const h = banner.offsetHeight;
-        document.body.style.setProperty('--camp-banner-h', h + 'px');
-        document.body.style.paddingTop = h + 'px';
-      }
-
-      // Sayfa açıldıktan kısa süre sonra yukarıdan kayarak gelsin
-      setTimeout(function () {
-        document.body.classList.add('camp-banner-open');
-        banner.classList.add('show');
-        applyOffset();
-      }, 900);
-
-      window.addEventListener('resize', function () {
-        if (banner.classList.contains('show')) applyOffset();
-      });
-
-      window.closeCampBanner = function () {
-        banner.classList.remove('show');
-        document.body.classList.remove('camp-banner-open');
-        document.body.style.paddingTop = '';
-        document.body.style.removeProperty('--camp-banner-h');
-        sessionStorage.setItem(STORAGE_KEY, '1');
-      };
-    })();
   </script>
 
   <!-- Fixed Buttons -->
@@ -971,12 +823,48 @@
       <i class="fa-solid fa-phone-volume"></i>
       <span class="fab-text">Ara</span>
     </a>
-    <a href="https://wa.me/905521309058?text=Merhaba%2C%20___%20.%20s%C4%B1n%C4%B1fa%20ge%C3%A7en%20%C3%B6%C4%9Frencim%20i%C3%A7in%20e-Pusula%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F" target="_blank" class="fab-btn fab-whatsapp">
-      <i class="fa-brands fa-whatsapp"></i>
-      <span class="fab-text">Whatsapp</span>
-    </a>
+    <button type="button" id="whatsapp-toggle" class="fab-btn fab-whatsapp" aria-expanded="false" aria-controls="whatsapp-panel">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      <span class="fab-text">Bize mesaj atın</span>
+    </button>
+    <div id="whatsapp-panel" class="whatsapp-panel" hidden>
+      <button type="button" class="whatsapp-close" aria-label="Mesaj alanını kapat">×</button>
+      <h3>Bize mesaj atın</h3>
+      <p>Öğrenciniz için bilgi almak ister misiniz?</p>
+      <label for="whatsapp-message">Mesajınız</label>
+      <textarea id="whatsapp-message" rows="5">Merhaba, oğlum/kızım ... sınıfa gidiyor. e-Pusula dersleri ve kayıt süreci hakkında bilgi alabilir miyim?</textarea>
+      <a id="whatsapp-send" class="button-primary" target="_blank" rel="noopener noreferrer">WhatsApp’ta Devam Et <i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+    </div>
   </div>
 
+  <script>
+    (function () {
+      const toggle = document.getElementById('whatsapp-toggle');
+      const panel = document.getElementById('whatsapp-panel');
+      const message = document.getElementById('whatsapp-message');
+      const send = document.getElementById('whatsapp-send');
+      function updateLink() {
+        send.href = 'https://wa.me/905521309058?text=' + encodeURIComponent(message.value);
+      }
+      function closePanel() {
+        panel.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+      toggle.addEventListener('click', function () {
+        if (!panel.hidden) { closePanel(); return; }
+        panel.hidden = false;
+        toggle.setAttribute('aria-expanded', 'true');
+        message.focus();
+      });
+      panel.querySelector('.whatsapp-close').addEventListener('click', closePanel);
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !panel.hidden) closePanel();
+      });
+      message.addEventListener('input', updateLink);
+      updateLink();
+    })();
+  </script>
 </body>
 
 </html>
