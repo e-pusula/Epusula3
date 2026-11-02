@@ -4,18 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>e‑Pusula: Başarıya giden yolun pusulası</title>
-  <meta name="description"
+  <title data-i18n="e-pusula-your-compass-on-the-road-to-success">e‑Pusula: Başarıya giden yolun pusulası</title>
+  <meta name="description" data-i18n="meta-description" data-i18n-attr="content"
     content="e-Pusula; LGS hazırlık, Matematik Olimpiyatı ve STEM programlarıyla öğrencilere başarıya giden yolda rehberlik eder.">
   <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
   <meta name="author" content="e-Pusula Akademi" />
   <link rel="canonical" href="https://epusula.net" />
-  <a href="https://forms.gle/o2jsCjgq6iahDkEj6" target="_blank"
-    rel="noopener noreferrer"></a><!-- control for Google forms -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <meta property="og:title" content="e-Pusula: Başarıya giden yolun pusulası">
-  <meta property="og:description" content="LGS hazırlık, Matematik Olimpiyatı ve STEM programları">
+  <meta property="og:title" data-i18n="og-title" data-i18n-attr="content" content="e-Pusula: Başarıya giden yolun pusulası">
+  <meta property="og:description" data-i18n="og-description" data-i18n-attr="content" content="LGS hazırlık, Matematik Olimpiyatı ve STEM programları">
   <meta property="og:image" content="assets/img/homepage.jpg">
   <link
     href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
@@ -24,6 +22,8 @@
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/translations.js" defer></script>
+  <script src="assets/i18n.js" defer></script>
 
 
   <script type="application/ld+json">
@@ -44,7 +44,7 @@
 </head>
 
 <body>
-  <a href="#main" style="position:absolute;left:-9999px">İçeriğe atla</a>
+  <a href="#main" style="position:absolute;left:-9999px" data-i18n="skip-to-content">İçeriğe atla</a>
 
   <header>
     <div class="nav-box">
@@ -52,18 +52,24 @@
         <img src="assets/img/logo.png" alt="Logo">
         <span>e-Pusula</span>
       </a>
-      <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
+      <div class="header-controls">
+        <div class="language-switch" role="group" aria-label="Dil seçimi" data-i18n="language-label" data-i18n-attr="aria-label">
+          <button type="button" data-language="tr" lang="tr" aria-label="Türkçe" aria-pressed="true">TR</button>
+          <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">ENG</button>
+        </div>
+        <button type="button" class="hamburger" onclick="toggleMenu()" aria-controls="main-nav" aria-expanded="false" aria-label="Menüyü aç veya kapat" data-i18n="menu-label" data-i18n-attr="aria-label">
+          <span></span>
+        </button>
       </div>
-      <ul class="nav">
-        <li><a href="#camp" class="nav-camp">Kamplarımız</a></li>
-        <li><a href="#about">Hakkımızda</a></li>
-        <li><a href="#programs">Programlar</a></li>
-        <li><a href="#teachers">Eğitmenlerimiz</a></li>
-        <li><a href="#system">Sistemimiz</a></li>
-        <li><a href="#contact">İletişim</a></li>
-        <li><a href="https://forms.gle/o2jsCjgq6iahDkEj6" target="_blank">Başvur</a></li>
-        <li><a href="#trial"><span style="color:#FFD700" class="handwriting">Ücretsiz</span> Deneme Dersleri</a></li>
+      <ul class="nav" id="main-nav">
+        <li><a href="#camp" class="nav-camp" data-i18n="our-camps">Kamplarımız</a></li>
+        <li><a href="#about" data-i18n="about-us">Hakkımızda</a></li>
+        <li><a href="#programs" data-i18n="programs">Programlar</a></li>
+        <li><a href="#teachers" data-i18n="our-instructors">Eğitmenlerimiz</a></li>
+        <li><a href="#system" data-i18n="how-it-works">Sistemimiz</a></li>
+        <li><a href="#contact" data-i18n="contact">İletişim</a></li>
+        <li><a href="https://forms.gle/o2jsCjgq6iahDkEj6" target="_blank" data-i18n="apply">Başvur</a></li>
+        <li><a href="#trial"><span style="color:#FFD700" class="handwriting" data-i18n="free">Ücretsiz</span> <span data-i18n="trial-lessons">Deneme Dersleri</span></a></li>
       </ul>
     </div>
   </header>
@@ -75,15 +81,15 @@
         <div class="grid-2">
           <div>
             <h1>
-              Başarıya giden yolun <span class="hero-title-highlight">pusulası</span>
+              <span data-i18n="your-guide-on-the-road-to">Başarıya giden yolun</span> <span class="hero-title-highlight" data-i18n="success">pusulası</span>
             </h1>
             <p class="muted" style="font-weight:600;margin:50px 0 6px 0">e-Pusula</p>
-            <p class="muted" style="max-width:50ch;font-size:20px">
+            <p class="muted" style="max-width:50ch;font-size:20px" data-i18n="learn-alongside-experienced-young-instructors-from-t-rkiye-s-lead">
               Türkiye'nin en iyi lise ve üniversitelerinde okuyan; uluslararası yarışmalarda Türkiye'yi başarıyla temsil
               etmiş deneyimli genç eğitmenlerden yol arkadaşlığı.
             </p>
             <div class="hero-buttons">
-              <a class="button-primary" href="#application-form">Bize Katılın!</a>
+              <a class="button-primary" href="#application-form" data-i18n="join-us">Bize Katılın!</a>
               <a class="button-primary btn-outline" href="https://www.instagram.com/epusula.akademi" target="_blank">
                 <i class="fa-brands fa-instagram"
                   style="font-size: 24px; margin-right: 8px; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;"></i>
@@ -93,12 +99,12 @@
             <div class="hero-buttons ">
               <a class="h-b2 button-primary btn-outline" href="https://chat.whatsapp.com/ExQ2V8ebruo7AIq0JhZ4hl"
                 target="_blank"><i style="color:green; font-size: 24px;" class="fa-brands fa-whatsapp"></i><span
-                  class="handwriting">Ücretsiz</span> Etkinlikler Duyuru Grubu!
+                  class="handwriting" data-i18n="free">Ücretsiz</span> <span data-i18n="events-announcement-group">Etkinlikler Duyuru Grubu!</span>
               </a>
             </div>
           </div>
           <div>
-            <img src="assets/img/homepage.jpg" alt="e-Pusula kahraman görseli">
+            <img src="assets/img/homepage.jpg" alt="e-Pusula kahraman görseli" data-i18n="hero-image" data-i18n-attr="alt">
           </div>
         </div>
       </div>
@@ -110,37 +116,37 @@
       <div class="container">
         <div class="grid-2">
           <div>
-            <h2 style="text-align:left;margin-bottom:8px">Biz Kimiz?</h2>
-            <p class="muted" style="max-width:50ch">
+            <h2 style="text-align:left;margin-bottom:8px" data-i18n="who-are-we">Biz Kimiz?</h2>
+            <p class="muted" style="max-width:50ch" data-i18n="e-pusula-is-an-education-platform-founded-by-outstanding-students">
               e-Pusula; Türkiye'nin en iyi lise ve üniversitelerinde okuyan, uluslararası arenada Türkiye'yi başarıyla
               temsil etmiş seçkin öğrenciler tarafından kurulan bir eğitim platformudur.
             </p>
             <div class="badges">
               <div class="card">
                 <i class="fa-solid fa-trophy"></i>
-                <span>Uluslararası yarışmalarda başarı</span>
+                <span data-i18n="success-in-international-competitions">Uluslararası yarışmalarda başarı</span>
               </div>
               <div class="card">
                 <i class="fa-solid fa-users"></i>
-                <span>Tecrübeli eğitmenler</span>
+                <span data-i18n="experienced-instructors">Tecrübeli eğitmenler</span>
               </div>
               <div class="card">
                 <i class="fa-solid fa-graduation-cap"></i>
-                <span>En iyi üniversiteler</span>
+                <span data-i18n="leading-universities">En iyi üniversiteler</span>
               </div>
               <div class="card">
                 <i class="fa-solid fa-compass"></i>
-                <span>Rehberlik ve yol gösterme</span>
+                <span data-i18n="guidance-and-mentorship">Rehberlik ve yol gösterme</span>
               </div>
             </div>
           </div>
           <div class="card">
-            <h3 style="margin-bottom:6px">Neden e-Pusula?</h3>
-            <p class="muted">Öğrenciler ve veliler için net, planlı ve motive edici bir öğrenme deneyimi.</p>
+            <h3 style="margin-bottom:6px" data-i18n="why-e-pusula">Neden e-Pusula?</h3>
+            <p class="muted" data-i18n="a-clear-structured-and-motivating-learning-experience-for-student">Öğrenciler ve veliler için net, planlı ve motive edici bir öğrenme deneyimi.</p>
             <ul style="margin-top:12px">
-              <li><i class="fa-regular fa-circle-check"></i> Kişiye özel öğrenme planları</li>
-              <li><i class="fa-regular fa-circle-check"></i> Düzenli mentorluk ve geri bildirim</li>
-              <li><i class="fa-regular fa-circle-check"></i> Topluluk desteği ve motivasyon</li>
+              <li><i class="fa-regular fa-circle-check"></i> <span data-i18n="personalized-learning-plans">Kişiye özel öğrenme planları</span></li>
+              <li><i class="fa-regular fa-circle-check"></i> <span data-i18n="regular-mentoring-and-feedback">Düzenli mentorluk ve geri bildirim</span></li>
+              <li><i class="fa-regular fa-circle-check"></i> <span data-i18n="community-support-and-motivation">Topluluk desteği ve motivasyon</span></li>
             </ul>
           </div>
         </div>
@@ -150,32 +156,32 @@
     <!-- Programs -->
     <section id="programs" class="section" style="background:#f9fafb;padding:3rem 0">
       <div class="container">
-        <h2>Programlarımız</h2>
-        <p class="programs-subtitle">Tüm programlarımız,<span class="primary-number">2.</span> sınıftan <span
-            class="primary-number">8.</span>sınıfa kadar her öğrencinin seviyesine özel olarak tasarlanmıştır.</p>
+        <h2 data-i18n="our-programs">Programlarımız</h2>
+        <p class="programs-subtitle"><span data-i18n="all-our-programs-are-tailored-to-each-student-s-level-from-grade">Tüm programlarımız,</span> <span class="primary-number" data-i18n="2">2.</span> <span data-i18n="to-grade">sınıftan</span> <span
+            class="primary-number" data-i18n="8">8.</span> <span data-i18n="programs-level-description">sınıfa kadar her öğrencinin seviyesine özel olarak tasarlanmıştır.</span></p>
         <div class="programs-grid">
           <!-- Matematik Card -->
           <div class="program-card">
             <div class="program-card-header">
               <i class="icon-box gradient-yellow-blue fa-solid fa-calculator"></i>
-              <h4>Matematik</h4>
+              <h4 data-i18n="mathematics">Matematik</h4>
             </div>
             <ul class="program-features">
               <li>
                 <i class="fa-solid fa-lightbulb"></i>
-                <span>Ezberleten değil, düşündüren,</span>
+                <span data-i18n="build-thinking-skills-beyond-memorization">Ezberleten değil, düşündüren,</span>
               </li>
               <li>
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <span>Sorularla keşfeden,</span>
+                <span data-i18n="explore-through-questions">Sorularla keşfeden,</span>
               </li>
               <li>
                 <i class="fa-solid fa-brain"></i>
-                <span>Mantığıyla öğreten,</span>
+                <span data-i18n="learn-through-logical-reasoning">Mantığıyla öğreten,</span>
               </li>
               <li>
                 <i class="fa-solid fa-heart"></i>
-                <span>Matematiği sevdiren bir eğitim.</span>
+                <span data-i18n="discover-a-love-of-mathematics">Matematiği sevdiren bir eğitim.</span>
               </li>
             </ul>
           </div>
@@ -184,24 +190,24 @@
           <div class="program-card">
             <div class="program-card-header">
               <i class="icon-box gradient-blue-purple fa-solid fa-medal"></i>
-              <h4>Olimpiyatlar <span class="program-subtitle">( Matematik ve Bilgisayar alanları )</span></h4>
+              <h4><span data-i18n="olympiads">Olimpiyatlar</span> <span class="program-subtitle" data-i18n="mathematics-and-computer-science">( Matematik ve Bilgisayar alanları )</span></h4>
             </div>
             <ul class="program-features">
               <li>
                 <i class="fa-solid fa-stamp"></i>
-                <span>Ezberden uzak, ispata dayalı,</span>
+                <span data-i18n="learn-through-proofs-beyond-memorization">Ezberden uzak, ispata dayalı,</span>
               </li>
               <li>
                 <i class="fa-solid fa-brain"></i>
-                <span>Cevabı değil, akıl yürütmeyi öğreten,</span>
+                <span data-i18n="develop-reasoning-skills-beyond-finding-answers">Cevabı değil, akıl yürütmeyi öğreten,</span>
               </li>
               <li>
                 <i class="fa-solid fa-puzzle-piece"></i>
-                <span>Zor sorularla zihni açan,</span>
+                <span data-i18n="stretch-your-mind-with-challenging-problems">Zor sorularla zihni açan,</span>
               </li>
               <li>
                 <i class="fa-solid fa-medal"></i>
-                <span>Madalyalara uzanan bir hazırlık.</span>
+                <span data-i18n="prepare-for-medal-winning-performance">Madalyalara uzanan bir hazırlık.</span>
               </li>
             </ul>
           </div>
@@ -210,24 +216,24 @@
           <div class="program-card">
             <div class="program-card-header">
               <i class="icon-box gradient-purple-blue fa-solid fa-graduation-cap"></i>
-              <h4>LGS Derece</h4>
+              <h4 data-i18n="lgs-excellence">LGS Derece</h4>
             </div>
             <ul class="program-features">
               <li>
                 <i class="fa-solid fa-rocket"></i>
-                <span>Standart hazırlıkla yetinmeyenler için,</span>
+                <span data-i18n="for-students-who-want-more-than-standard-exam-prep">Standart hazırlıkla yetinmeyenler için,</span>
               </li>
               <li>
                 <i class="fa-solid fa-stairs"></i>
-                <span>Temeli sağlamlaştırarak adım adım zirveye uzanan,</span>
+                <span data-i18n="build-strong-foundations-and-aim-higher-step-by-step">Temeli sağlamlaştırarak adım adım zirveye uzanan,</span>
               </li>
               <li>
                 <i class="fa-solid fa-bullseye"></i>
-                <span>Planlı çalışma, doğru yönlendirme ve kararlılıkla,</span>
+                <span data-i18n="combine-structured-study-guidance-and-determination">Planlı çalışma, doğru yönlendirme ve kararlılıkla,</span>
               </li>
               <li>
                 <i class="fa-solid fa-trophy"></i>
-                <span>Her detayı LGS başarısına odaklanan bir program.</span>
+                <span data-i18n="a-program-focused-on-success-in-t-rkiye-s-lgs-high-school-entranc">Her detayı LGS başarısına odaklanan bir program.</span>
               </li>
             </ul>
           </div>
@@ -236,24 +242,24 @@
           <div class="program-card">
             <div class="program-card-header">
               <i class="icon-box gradient-yellow-blue fa-solid fa-globe"></i>
-              <h4>İngilizce <span class="program-subtitle">Başlangıçtan ileri düzeye (A1–›C1)</span></h4>
+              <h4><span data-i18n="english">İngilizce</span> <span class="program-subtitle" data-i18n="beginner-to-advanced-a1-c1">Başlangıçtan ileri düzeye (A1–›C1)</span></h4>
             </div>
             <ul class="program-features">
               <li>
                 <i class="fa-solid fa-ear-listen"></i>
-                <span>Duyarak, konuşarak ve düşünerek ilerleyen,</span>
+                <span data-i18n="progress-through-listening-speaking-and-thinking">Duyarak, konuşarak ve düşünerek ilerleyen,</span>
               </li>
               <li>
                 <i class="fa-solid fa-book-open"></i>
-                <span>Kelimenin değil, anlamın peşinden giden,</span>
+                <span data-i18n="explore-meaning-beyond-individual-words">Kelimenin değil, anlamın peşinden giden,</span>
               </li>
               <li>
                 <i class="fa-solid fa-door-open"></i>
-                <span>İngilizceyi sınıfın dışına taşıyan,</span>
+                <span data-i18n="take-english-beyond-the-classroom">İngilizceyi sınıfın dışına taşıyan,</span>
               </li>
               <li>
                 <i class="fa-solid fa-comments"></i>
-                <span>Öğrenciyi konuşmaya teşvik eden bir yol.</span>
+                <span data-i18n="build-the-confidence-to-speak">Öğrenciyi konuşmaya teşvik eden bir yol.</span>
               </li>
             </ul>
           </div>
@@ -264,18 +270,18 @@
     <!-- System -->
     <section id="system" class="section">
       <div class="container">
-        <h2>Sistemimiz</h2>
+        <h2 data-i18n="how-it-works">Sistemimiz</h2>
         <div class="grid-2">
           <ul>
-            <li><i class="fa-regular fa-circle-check"></i> 5–10 kişilik interaktif sınıflar 🎯</li>
-            <li><i class="fa-solid fa-laptop"></i> Google Classroom ile kolay erişim 💻</li>
-            <li><i class="fa-regular fa-calendar"></i> Haftalık 5+ saat planlı ders 📅</li>
-            <li><i class="fa-regular fa-comment"></i> Ödev & İlerleme takibi ✏️</li>
-            <li><i class="fa-regular fa-circle-check"></i> Öğretmenlerle anlık soru-cevap 📲</li>
+            <li><i class="fa-regular fa-circle-check"></i> <span data-i18n="interactive-classes-of-5-10-students">5–10 kişilik interaktif sınıflar 🎯</span></li>
+            <li><i class="fa-solid fa-laptop"></i> <span data-i18n="easy-access-through-google-classroom">Google Classroom ile kolay erişim 💻</span></li>
+            <li><i class="fa-regular fa-calendar"></i> <span data-i18n="5-hours-of-scheduled-lessons-each-week">Haftalık 5+ saat planlı ders 📅</span></li>
+            <li><i class="fa-regular fa-comment"></i> <span data-i18n="homework-progress-tracking">Ödev & İlerleme takibi ✏️</span></li>
+            <li><i class="fa-regular fa-circle-check"></i> <span data-i18n="live-q-a-with-instructors">Öğretmenlerle anlık soru-cevap 📲</span></li>
           </ul>
           <div class="card">
-            <h4 style="margin-bottom:6px">Planlı ve Şeffaf</h4>
-            <p class="muted">Haftalık program, kayıtlar ve ödevler tek yerde. Öğrenciler ve veliler; ders akışı, geri
+            <h4 style="margin-bottom:6px" data-i18n="structured-and-transparent">Planlı ve Şeffaf</h4>
+            <p class="muted" data-i18n="weekly-schedules-recordings-and-assignments-in-one-place-students">Haftalık program, kayıtlar ve ödevler tek yerde. Öğrenciler ve veliler; ders akışı, geri
               bildirimler ve gelişim metriklerini panel üzerinden kolayca takip eder.</p>
           </div>
         </div>
@@ -285,9 +291,9 @@
     <!-- Teachers -->
     <section id="teachers" class="section">
       <div class="container">
-        <h2>Eğitmenlerimiz</h2>
+        <h2 data-i18n="our-instructors">Eğitmenlerimiz</h2>
         <div class="teachers-wrapper">
-          <button class="arrow teachers-left-arrow">
+          <button class="arrow teachers-left-arrow" data-i18n="previous-instructor" data-i18n-attr="aria-label">
             <i class="fa fa-chevron-left"></i>
           </button>
           <div class="teachers-carousel">
@@ -299,14 +305,14 @@
               </div>
               <div class="teacher-info">
                 <ul>
-                  <li><i class="fa-solid fa-flag"></i> <strong>Milli Takım:</strong> Uluslararası Matematik
-                    Olimpiyatları (Kanguru)</li>
-                  <li><i class="fa-solid fa-medal"></i> <strong>Altın Madalya:</strong> Asya Matematik Olimpiyatları
-                    (AIMO), Japonya</li>
-                  <li><i class="fa-solid fa-trophy"></i> <strong>Dünya 3.'lüğü:</strong> Dünya Matematik Yarışması
+                  <li><i class="fa-solid fa-flag"></i> <strong data-i18n="national-team">Milli Takım:</strong> <span data-i18n="international-mathematics-olympiads-kangaroo">Uluslararası Matematik
+                    Olimpiyatları (Kanguru)</span></li>
+                  <li><i class="fa-solid fa-medal"></i> <strong data-i18n="gold-medal">Altın Madalya:</strong> <span data-i18n="asia-international-mathematical-olympiad-aimo-japan">Asya Matematik Olimpiyatları
+                    (AIMO), Japonya</span></li>
+                  <li><i class="fa-solid fa-trophy"></i> <strong data-i18n="3rd-in-the-world">Dünya 3.'lüğü:</strong> <span data-i18n="world-mathematics-invitational-wmi-thailand">Dünya Matematik Yarışması
                     (WMI),
-                    Tayland</li>
-                  <li><i class="fa-solid fa-graduation-cap"></i> <strong>Stajyer:</strong> Koç Üniversitesi</li>
+                    Tayland</span></li>
+                  <li><i class="fa-solid fa-graduation-cap"></i> <strong data-i18n="intern">Stajyer:</strong> <span data-i18n="ko-university">Koç Üniversitesi</span></li>
                 </ul>
               </div>
             </div>
@@ -319,13 +325,13 @@
               </div>
               <div class="teacher-info">
                 <ul>
-                  <li><i class="fa-solid fa-flag"></i> <strong>Milli Takım:</strong> Uluslararası Bilim ve Mühendislik
-                    Yarışması (ISEF)</li>
-                  <li><i class="fa-solid fa-chart-line"></i> <strong>YKS Sayısal:</strong> Türkiye 150.'si, Bogazici
-                    Universitesi Bilgisayar Muh.</li>
-                  <li><i class="fa-solid fa-school"></i> <strong>LGS ≈500 Puan:</strong> Kabataş Erkek Lisesi</li>
-                  <li><i class="fa-solid fa-award"></i> <strong>Türkiye 1.'liği:</strong> TÜBİTAK Proje Yarışması
-                    (Matematik)</li>
+                  <li><i class="fa-solid fa-flag"></i> <strong data-i18n="national-team">Milli Takım:</strong> <span data-i18n="international-science-and-engineering-fair-isef">Uluslararası Bilim ve Mühendislik
+                    Yarışması (ISEF)</span></li>
+                  <li><i class="fa-solid fa-chart-line"></i> <strong data-i18n="yks-stem-track">YKS Sayısal:</strong> <span data-i18n="ranked-150th-in-t-rkiye-computer-engineering-at-bo-azi-i-universi">Türkiye 150.'si, Bogazici
+                    Universitesi Bilgisayar Muh.</span></li>
+                  <li><i class="fa-solid fa-school"></i> <strong data-i18n="lgs-500-points">LGS ≈500 Puan:</strong> <span data-i18n="kabata-high-school">Kabataş Erkek Lisesi</span></li>
+                  <li><i class="fa-solid fa-award"></i> <strong data-i18n="1st-in-t-rkiye">Türkiye 1.'liği:</strong> <span data-i18n="t-bi-tak-research-projects-competition-mathematics">TÜBİTAK Proje Yarışması
+                    (Matematik)</span></li>
                 </ul>
               </div>
             </div>
@@ -338,10 +344,10 @@
               </div>
               <div class="teacher-info">
                 <ul>
-                  <li><i class="fa-solid fa-medal"></i> <strong>ISEF:</strong> Kimya Dünya 4.’lüğü</li>
-                  <li><i class="fa-solid fa-flag"></i> <strong>TÜBİTAK:</strong> Milli Takım</li>
-                  <li><i class="fa-solid fa-school"></i> <strong>LGS:</strong> %0,2</li>
-                  <li><i class="fa-solid fa-award"></i> Cumhurbaşkanlığı Yetişen Genç Yetenek Ödülü</li>
+                  <li><i class="fa-solid fa-medal"></i> <strong>ISEF:</strong> <span data-i18n="4th-in-the-world-in-chemistry">Kimya Dünya 4.’lüğü</span></li>
+                  <li><i class="fa-solid fa-flag"></i> <strong>TÜBİTAK:</strong> <span data-i18n="national-team-2">Milli Takım</span></li>
+                  <li><i class="fa-solid fa-school"></i> <strong>LGS:</strong> <span data-i18n="top-0-2">%0,2</span></li>
+                  <li><i class="fa-solid fa-award"></i> <span data-i18n="presidential-emerging-young-talent-award">Cumhurbaşkanlığı Yetişen Genç Yetenek Ödülü</span></li>
                 </ul>
               </div>
             </div>
@@ -354,14 +360,14 @@
               </div>
               <div class="teacher-info">
                 <ul>
-                  <li><i class="fa-solid fa-plane"></i> <strong>Türkiye Birinciliği:</strong> TEKNOFEST İnsansız Hava
-                    Araçları Yarışması</li>
-                  <li><i class="fa-solid fa-school"></i> <strong>LGS %0,4:</strong> Kartal Anadolu İmam Hatip Lisesi
+                  <li><i class="fa-solid fa-plane"></i> <strong data-i18n="1st-in-t-rkiye-2">Türkiye Birinciliği:</strong> <span data-i18n="teknofest-unmanned-aerial-vehicle-competition">TEKNOFEST İnsansız Hava
+                    Araçları Yarışması</span></li>
+                  <li><i class="fa-solid fa-school"></i> <strong data-i18n="lgs-top-0-4">LGS %0,4:</strong> <span data-i18n="kartal-anatolian-imam-hatip-high-school">Kartal Anadolu İmam Hatip Lisesi</span>
                   </li>
-                  <li><i class="fa-solid fa-medal"></i> <strong>Bronz Madalya:</strong> Ulusal Antalya Matematik
-                    Olimpiyatları</li>
-                  <li><i class="fa-solid fa-award"></i> <strong>Bölge Birinciliği:</strong> TÜBİTAK Proje Yarışması
-                    (Matematik)</li>
+                  <li><i class="fa-solid fa-medal"></i> <strong data-i18n="bronze-medal">Bronz Madalya:</strong> <span data-i18n="national-antalya-mathematics-olympiad">Ulusal Antalya Matematik
+                    Olimpiyatları</span></li>
+                  <li><i class="fa-solid fa-award"></i> <strong data-i18n="1st-in-the-region">Bölge Birinciliği:</strong> <span data-i18n="t-bi-tak-research-projects-competition-mathematics">TÜBİTAK Proje Yarışması
+                    (Matematik)</span></li>
                 </ul>
               </div>
             </div>
@@ -374,10 +380,10 @@
               </div>
               <div class="teacher-info">
                 <ul>
-                  <li><i class="fa-solid fa-graduation-cap"></i> <strong>Üniversite:</strong> İstanbul Teknik Üniversitesi Endüstri Mühendisliği</li>
+                  <li><i class="fa-solid fa-graduation-cap"></i> <strong data-i18n="university">Üniversite:</strong> <span data-i18n="industrial-engineering-at-istanbul-technical-university">İstanbul Teknik Üniversitesi Endüstri Mühendisliği</span></li>
                   <li><i class="fa-solid fa-globe"></i> <strong>IB:</strong> 42/45</li>
-                  <li><i class="fa-solid fa-award"></i> Dünyanın en iyi 10 üniversitesinden kabul</li>
-                  <li><i class="fa-solid fa-school"></i> <strong>LGS %0,2:</strong> Kartal Anadolu İmam Hatip Lisesi</li>
+                  <li><i class="fa-solid fa-award"></i> <span data-i18n="admission-to-a-university-ranked-among-the-world-s-top-10">Dünyanın en iyi 10 üniversitesinden kabul</span></li>
+                  <li><i class="fa-solid fa-school"></i> <strong data-i18n="lgs-top-0-2">LGS %0,2:</strong> <span data-i18n="kartal-anatolian-imam-hatip-high-school">Kartal Anadolu İmam Hatip Lisesi</span></li>
                 </ul>
               </div>
             </div>
@@ -390,9 +396,9 @@
               </div>
               <div class="teacher-info">
                 <ul>
-                  <li><i class="fa-solid fa-graduation-cap"></i> <strong>Üniversite:</strong> Kocaeli Üniversitesi Mekanik Mühendisliği</li>
-                  <li><i class="fa-solid fa-certificate"></i> <strong>Cambridge:</strong> IGCE Programı</li>
-                  <li><i class="fa-solid fa-school"></i> <strong>LGS:</strong> %0,4</li>
+                  <li><i class="fa-solid fa-graduation-cap"></i> <strong data-i18n="university">Üniversite:</strong> <span data-i18n="mechanical-engineering-at-kocaeli-university">Kocaeli Üniversitesi Mekanik Mühendisliği</span></li>
+                  <li><i class="fa-solid fa-certificate"></i> <strong>Cambridge:</strong> <span data-i18n="igce-program">IGCE Programı</span></li>
+                  <li><i class="fa-solid fa-school"></i> <strong>LGS:</strong> <span data-i18n="top-0-4">%0,4</span></li>
                 </ul>
               </div>
             </div>
@@ -400,20 +406,20 @@
             <!-- More Teachers Coming -->
             <div class="teacher-card more-teachers-card">
               <div class="teacher-photo">
-                <img src="assets/img/unkown-man.png" alt="Daha Fazla Eğitmen">
-                <h4>Ve Daha Fazlası...</h4>
+                <img src="assets/img/unkown-man.png" alt="Daha Fazla Eğitmen" data-i18n="more-instructors" data-i18n-attr="alt">
+                <h4 data-i18n="and-many-more">Ve Daha Fazlası...</h4>
               </div>
               <div class="teacher-info">
                 <ul>
-                  <li><i class="fa-solid fa-users"></i> <strong>Ekibimiz büyüyor!</strong> Yeni eğitmenlerimiz de
-                    sizlerle.</li>
-                  <li><i class="fa-solid fa-star"></i> <strong>Alanında uzman</strong> kadromuzla tanışmak için bizi
-                    takip edin.</li>
+                  <li><i class="fa-solid fa-users"></i> <strong data-i18n="our-team-is-growing">Ekibimiz büyüyor!</strong> <span data-i18n="meet-our-newest-instructors">Yeni eğitmenlerimiz de
+                    sizlerle.</span></li>
+                  <li><i class="fa-solid fa-star"></i> <strong data-i18n="experts-in-their-fields">Alanında uzman</strong> <span data-i18n="follow-us-to-get-to-know-our-team">kadromuzla tanışmak için bizi
+                    takip edin.</span></li>
                 </ul>
               </div>
             </div>
           </div>
-          <button class="arrow teachers-right-arrow">
+          <button class="arrow teachers-right-arrow" data-i18n="next-instructor" data-i18n-attr="aria-label">
             <i class="fa fa-chevron-right"></i>
           </button>
         </div>
@@ -425,9 +431,9 @@
       <div class="container">
         <div class="camp-card">
           <div class="camp-content">
-            <span class="camp-tag"><i class="fa-solid fa-gift"></i> Ücretsiz Eğitim Kampları</span>
-            <h2 id="camp-title" class="camp-title">ePusula <span class="hero-title-highlight">Kampları</span></h2>
-            <p class="muted camp-lead">
+            <span class="camp-tag"><i class="fa-solid fa-gift"></i> <span data-i18n="free-learning-camps">Ücretsiz Eğitim Kampları</span></span>
+            <h2 id="camp-title" class="camp-title">ePusula <span class="hero-title-highlight" data-i18n="camps">Kampları</span></h2>
+            <p class="muted camp-lead" data-i18n="our-back-to-school-learning-camp-has-ended-join-our-whatsapp-grou">
               Okula Dönüş Eğitim Kampımız tamamlandı. Yeni ücretsiz kamplarımızdan ve eğitim
               duyurularımızdan haberdar olmak için WhatsApp grubumuza katılabilirsiniz.
             </p>
@@ -436,11 +442,11 @@
               rel="noopener noreferrer">
               <i class="fa-brands fa-whatsapp"></i>
               <span>
-                <strong>WhatsApp Grubuna Katıl</strong>
-                <small>Yeni kamplardan haberdar ol</small>
+                <strong data-i18n="join-our-whatsapp-group">WhatsApp Grubuna Katıl</strong>
+                <small data-i18n="get-updates-on-upcoming-camps">Yeni kamplardan haberdar ol</small>
               </span>
             </a>
-            <p class="camp-note">Birlikte öğrenmeye devam ediyoruz!</p>
+            <p class="camp-note" data-i18n="let-s-keep-learning-together">Birlikte öğrenmeye devam ediyoruz!</p>
           </div>
         </div>
       </div>
@@ -449,9 +455,9 @@
     <!-- Testimonials -->
     <section class="section" style="background:#f9fafb;padding:3rem 0">
       <div class="container">
-        <h2>Öğrenci & Veli Yorumları</h2>
+        <h2 data-i18n="student-parent-testimonials">Öğrenci & Veli Yorumları</h2>
         <div class="testimonials-wrapper">
-          <button class="arrow left-arrow">
+          <button class="arrow left-arrow" data-i18n="previous-testimonial" data-i18n-attr="aria-label">
             <i class="fa fa-chevron-left"></i>
           </button>
           <div class="testimonials-carousel">
@@ -459,35 +465,36 @@
               <div style="display:flex;gap:12px;align-items:center">
                 <img src="assets/img/avatar-1.jpg" alt="Efe" class="avatar">
                 <div>
-                  <strong>Efe (8. Sınıf)</strong>
-                  <div class="muted">e-Pusula ailesi</div>
+                  <strong data-i18n="efe-grade-8">Efe (8. Sınıf)</strong>
+                  <div class="muted" data-i18n="the-e-pusula-community">e-Pusula ailesi</div>
                 </div>
               </div>
-              <p style="margin-top:10px">"LGS çalışmalarım e-Pusula ile çok daha planlı. Deneme analizleri harika!"</p>
+              <p style="margin-top:10px" data-i18n="my-lgs-preparation-is-much-more-organized-with-e-pusula-the-pract">"LGS çalışmalarım e-Pusula ile çok daha planlı. Deneme analizleri harika!"</p>
             </div>
             <div class="card">
               <div style="display:flex;gap:12px;align-items:center">
                 <img src="assets/img/avatar-2.jpg" alt="Ayşe" class="avatar">
                 <div>
-                  <strong>Ayşe (Veli)</strong>
-                  <div class="muted">e-Pusula ailesi</div>
+                  <strong data-i18n="ay-e-parent">Ayşe (Veli)</strong>
+                  <div class="muted" data-i18n="the-e-pusula-community">e-Pusula ailesi</div>
                 </div>
               </div>
-              <p style="margin-top:10px">"Mentorlarımız çok ilgili. Kızımın motivasyonu gözle görülür arttı."</p>
+              <p style="margin-top:10px" data-i18n="our-mentors-are-very-supportive-my-daughter-s-motivation-has-noti">"Mentorlarımız çok ilgili. Kızımın motivasyonu gözle görülür arttı."</p>
             </div>
             <div class="card">
               <div style="display:flex;gap:12px;align-items:center">
                 <img src="assets/img/avatar-3.jpg" alt="Deniz" class="avatar">
                 <div>
-                  <strong>Deniz (3. Sınıf)</strong>
-                  <div class="muted">e-Pusula ailesi</div>
+                  <strong data-i18n="deniz-grade-3">Deniz (3. Sınıf)</strong>
+                  <div class="muted" data-i18n="the-e-pusula-community">e-Pusula ailesi</div>
                 </div>
               </div>
-              <p style="margin-top:10px">"Matematik etkinlikleri çok eğlenceli ve öğretici. Projeler yapıyoruz!"</p>
+              <p style="margin-top:10px" data-i18n="the-math-activities-are-fun-and-educational-we-get-to-work-on-pro">"Matematik etkinlikleri çok eğlenceli ve öğretici. Projeler yapıyoruz!"</p>
             </div>
           </div>
-          <button class="arrow right-arrow">
+          <button class="arrow right-arrow" data-i18n="next-testimonial" data-i18n-attr="aria-label">
             <i class="fa fa-chevron-right"></i>
+          </button>
         </div>
       </div>
     </section>
@@ -495,37 +502,37 @@
     <!-- Advantages -->
     <section id="advantages" class="section">
       <div class="container">
-        <h2>Online Eğitimin Avantajları</h2>
+        <h2 data-i18n="the-benefits-of-online-learning">Online Eğitimin Avantajları</h2>
         <div class="grid-3">
           <div class="card">
             <i class="icon-box gradient-yellow-blue fa-solid fa-users"></i>
-            <h4>Yeni Arkadaşlıklar</h4>
-            <p class="muted">Disiplinli topluluklarla birlikte, motive edici bir öğrenme ortamı.</p>
+            <h4 data-i18n="new-friendships">Yeni Arkadaşlıklar</h4>
+            <p class="muted" data-i18n="a-motivating-learning-environment-with-a-focused-supportive-commu">Disiplinli topluluklarla birlikte, motive edici bir öğrenme ortamı.</p>
           </div>
           <div class="card">
             <i class="icon-box gradient-purple-blue fa-solid fa-camera"></i>
-            <h4>Rahat Giriş, Kameralar Açık</h4>
-            <p class="muted">Google Classroom ve canlı derslerle düzenli, etkileşimli eğitim.</p>
+            <h4 data-i18n="easy-access-cameras-on">Rahat Giriş, Kameralar Açık</h4>
+            <p class="muted" data-i18n="structured-interactive-learning-through-google-classroom-and-live">Google Classroom ve canlı derslerle düzenli, etkileşimli eğitim.</p>
           </div>
           <div class="card">
             <i class="icon-box gradient-yellow-blue fa-solid fa-medal"></i>
-            <h4>Uzman Kadro</h4>
-            <p class="muted">Madalyalı, deneyimli mentorlarla güçlü bir rehberlik.</p>
+            <h4 data-i18n="expert-instructors">Uzman Kadro</h4>
+            <p class="muted" data-i18n="strong-guidance-from-experienced-medal-winning-mentors">Madalyalı, deneyimli mentorlarla güçlü bir rehberlik.</p>
           </div>
           <div class="card">
             <i class="icon-box gradient-purple-blue fa-solid fa-book-open"></i>
-            <h4>Profesyonel Müfredat</h4>
-            <p class="muted">Okul müfredatından farklı, zenginleştirilmiş ve seviyeye uygun içerik.</p>
+            <h4 data-i18n="a-carefully-designed-curriculum">Profesyonel Müfredat</h4>
+            <p class="muted" data-i18n="enriched-level-appropriate-content-that-goes-beyond-the-school-cu">Okul müfredatından farklı, zenginleştirilmiş ve seviyeye uygun içerik.</p>
           </div>
           <div class="card">
             <i class="icon-box gradient-blue-purple fa-solid fa-calendar"></i>
-            <h4>Planlı Program</h4>
-            <p class="muted">Haftalık ders akışı, ödev ve deneme takipleriyle net süreç.</p>
+            <h4 data-i18n="a-structured-schedule">Planlı Program</h4>
+            <p class="muted" data-i18n="a-clear-learning-path-with-weekly-lessons-homework-tracking-and-p">Haftalık ders akışı, ödev ve deneme takipleriyle net süreç.</p>
           </div>
           <div class="card">
             <i class="icon-box gradient-blue-purple fa-solid fa-user-shield"></i>
-            <h4>Şeffaf ve Güvenli</h4>
-            <p class="muted">Veliler için net raporlar ve kayıtlarla şeffaf süreç yönetimi.</p>
+            <h4 data-i18n="transparent-and-secure">Şeffaf ve Güvenli</h4>
+            <p class="muted" data-i18n="clear-reports-and-recordings-keep-parents-informed-at-every-step">Veliler için net raporlar ve kayıtlarla şeffaf süreç yönetimi.</p>
           </div>
         </div>
       </div>
@@ -534,17 +541,17 @@
     <!-- Trial -->
     <section id="trial" class="section">
       <div class="container" style="text-align:center">
-        <h2 class="trial-title"><span class="handwriting">Ücretsiz</span> Deneme Dersine Katılın</h2>
-        <p class="muted" style="max-width:60ch;margin:0 auto 12px">
+        <h2 class="trial-title"><span class="handwriting" data-i18n="free">Ücretsiz</span> <span data-i18n="trial-lessons-join-us">Deneme Dersine Katılın</span></h2>
+        <p class="muted" style="max-width:60ch;margin:0 auto 12px" data-i18n="join-a-free-trial-lesson-to-experience-learning-at-e-pusula-first">
           e-Pusula'daki eğitimi yakından görmek için ücretsiz deneme dersine katılın.
         </p>
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-          <a href="#application-form" class="button-primary">Başvuru Formu</a>
+          <a href="#application-form" class="button-primary" data-i18n="application-form">Başvuru Formu</a>
           <a href="tel:+905521309058" class="button-primary btn-outline">
-            <i class="fa-solid fa-phone-volume"></i> Hemen Ara
+            <i class="fa-solid fa-phone-volume"></i> <span data-i18n="call-now">Hemen Ara</span>
           </a>
         </div>
-        <p class="muted" style="font-size:12px;margin-top:8px">İlk deneme dersi tamamen ücretsizdir.</p>
+        <p class="muted" style="font-size:12px;margin-top:8px" data-i18n="your-first-trial-lesson-is-completely-free">İlk deneme dersi tamamen ücretsizdir.</p>
       </div>
     </section>
 
@@ -553,50 +560,50 @@
       <div class="container">
         <div class="grid-2">
           <div>
-            <h2 style="text-align:left">Gelin beraber istişare edelim</h2>
-            <p class="muted">Kayıt ve detaylar için formu doldurun; ekibimiz en kısa sürede sizinle iletişime geçsin.
+            <h2 style="text-align:left" data-i18n="let-s-talk">Gelin beraber istişare edelim</h2>
+            <p class="muted" data-i18n="fill-out-the-form-for-enrollment-and-more-information-our-team-wi">Kayıt ve detaylar için formu doldurun; ekibimiz en kısa sürede sizinle iletişime geçsin.
             </p>
             <div class="card contact-gradient" style="margin-top:12px">
-              <p style="font-weight:700;margin:0">Telefon:</p>
+              <p style="font-weight:700;margin:0" data-i18n="phone">Telefon:</p>
               <p style="margin:4px 0 8px 0">+90 552 130 90 58</p>
-              <p style="font-weight:700;margin:0">E-posta:</p>
+              <p style="font-weight:700;margin:0" data-i18n="email">E-posta:</p>
               <p style="margin:4px 0 8px 0">info@epusula.net</p>
               <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
                 <a href="tel:+905521309058" class="button-primary">
-                  <i class="fa-solid fa-phone-volume"></i> Hemen Ara
+                  <i class="fa-solid fa-phone-volume"></i> <span data-i18n="call-now">Hemen Ara</span>
                 </a>
                 <a href="https://wa.me/905521309058?text=Merhaba%2C%20___%20.%20s%C4%B1n%C4%B1fa%20ge%C3%A7en%20%C3%B6%C4%9Frencim%20i%C3%A7in%20e-Pusula%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F" target="_blank" class="button-primary contact-yellow">WhatsApp</a>
               </div>
             </div>
 
             <div style="margin-top:24px;">
-              <h3 style="margin-bottom: 12px; text-align: center; font-size: 1.5rem;">Türkiye'nin Dört Bir Yanından</h3>
+              <h3 style="margin-bottom: 12px; text-align: center; font-size: 1.5rem;" data-i18n="from-across-t-rkiye">Türkiye'nin Dört Bir Yanından</h3>
               <p class="muted" style="font-size:14px; text-align:center; margin-bottom:12px;">
-                Bugüne kadar Türkiye’nin dört bir yanından <strong>783 kişiye ücretsiz eğitim</strong> verdik.
+                <span data-i18n="so-far-we-have-provided">Bugüne kadar Türkiye’nin dört bir yanından</span> <strong data-i18n="free-education-to-783-people">783 kişiye ücretsiz eğitim</strong> <span data-i18n="across-t-rkiye">verdik.</span>
               </p>
-              <img src="assets/img/map.jpeg" alt="Türkiye Öğrenci Haritası"
+              <img src="assets/img/map.jpeg" alt="Türkiye Öğrenci Haritası" data-i18n="student-map" data-i18n-attr="alt"
                 style="border-radius: 12px; width: 100%; box-shadow: var(--shadow); margin-bottom: 16px;">
 
               <p
                 style="font-weight:700; color: var(--primary); font-size: 1.1rem; text-align: center; margin-bottom: 16px;">
-                <i class="fa-solid fa-users-viewfinder"></i> Sınırları Aşan Bir Başarı Ağı!
+                <i class="fa-solid fa-users-viewfinder"></i> <span data-i18n="a-network-of-success-beyond-borders">Sınırları Aşan Bir Başarı Ağı!</span>
               </p>
 
               <div style="background: #f9fafb; padding: 20px; border-radius: 12px; border: 1px solid var(--border);">
                 <h4 style="margin-bottom: 12px; font-size: 1.25rem; color: var(--fg);"><span class="handwriting"
-                    style="color:var(--primary)">Eğlenceli </span> Derslerimizde:</h4>
+                    style="color:var(--primary)" data-i18n="fun">Eğlenceli </span> <span data-i18n="learning-experiences">Derslerimizde:</span></h4>
                 <ul style="padding: 0; margin: 0;">
                   <li style="margin-bottom: 10px; display: flex; gap: 10px; align-items: flex-start;">
                     <i class="fa-solid fa-circle-check" style="color: var(--primary); margin-top: 4px;"></i>
-                    <span>Türkiye'nin her yerinden yeni arkadaşlar edinme fırsatı</span>
+                    <span data-i18n="make-new-friends-from-all-across-t-rkiye">Türkiye'nin her yerinden yeni arkadaşlar edinme fırsatı</span>
                   </li>
                   <li style="margin-bottom: 10px; display: flex; gap: 10px; align-items: flex-start;">
                     <i class="fa-solid fa-circle-check" style="color: var(--primary); margin-top: 4px;"></i>
-                    <span>Farklı şehirlerden vizyoner öğrencilerle tanışın</span>
+                    <span data-i18n="meet-ambitious-students-from-different-cities">Farklı şehirlerden vizyoner öğrencilerle tanışın</span>
                   </li>
                   <li style="display: flex; gap: 10px; align-items: flex-start;">
                     <i class="fa-solid fa-circle-check" style="color: var(--primary); margin-top: 4px;"></i>
-                    <span>Başarı odaklı, motive edici bir sosyal çevre edinin</span>
+                    <span data-i18n="become-part-of-a-motivating-community-focused-on-success">Başarı odaklı, motive edici bir sosyal çevre edinin</span>
                   </li>
                 </ul>
               </div>
@@ -604,11 +611,12 @@
           </div>
           <div id="application-form" class="sign-up-card" style="padding:0; overflow:hidden;">
             <div style="padding:20px; text-align:center;">
-              <h3 style="margin-bottom:12px;">Kayıt ve Başvuru Formu</h3>
+              <h3 style="margin-bottom:12px;" data-i18n="enrollment-application-form">Kayıt ve Başvuru Formu</h3>
+              <p class="muted form-language-note" lang="en" hidden>The application form below is in Turkish. You can also <a href="#" class="english-contact-link">contact us in English on WhatsApp</a>.</p>
             </div>
-            <iframe title="e-Pusula Kayıt ve Başvuru Formu"
+            <iframe title="e-Pusula Kayıt ve Başvuru Formu" data-i18n-title="form-title"
               src="https://docs.google.com/forms/d/e/1FAIpQLSeF6kbZUWuX-5JUiB82K83uENhT1jA0Ik9IaKxtquqWhi-sPQ/viewform?embedded=true"
-              width="100%" height="1150" frameborder="0" marginheight="0" marginwidth="0">Yükleniyor…</iframe>
+              width="100%" height="1150" frameborder="0" marginheight="0" marginwidth="0" data-i18n="loading">Yükleniyor…</iframe>
           </div>
         </div>
       </div>
@@ -621,7 +629,7 @@
         <img src="assets/img/logo.png" alt="Logo">
         <span>e-Pusula</span>
       </a>
-      <div class="muted">© <span id="year"></span> e-Pusula Akademi. Tüm hakları saklıdır.</div>
+      <div class="muted">© <span id="year"></span> <span data-i18n="e-pusula-academy-all-rights-reserved">e-Pusula Akademi. Tüm hakları saklıdır.</span></div>
       <div style="display:flex;gap:12px">
         <a href="tel:+905521309058">+90 552 130 90 58</a>
         <a href="mailto:info@epusula.net">info@epusula.net</a>
@@ -633,16 +641,33 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    function toggleMenu() {
-      document.querySelector('.nav').classList.toggle('active');
+    function setMenuOpen(open) {
+      document.querySelector('.nav').classList.toggle('active', open);
+      const hamburger = document.querySelector('.hamburger');
+      hamburger.classList.toggle('active', open);
+      hamburger.setAttribute('aria-expanded', String(open));
+      document.querySelector('.nav-overlay').classList.toggle('active', open);
+      document.body.style.overflow = open ? 'hidden' : '';
     }
 
-    document.addEventListener('click', (e) => {
-      const nav = document.querySelector('.nav');
-      const hamburger = document.querySelector('.hamburger');
-      if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-        nav.classList.remove('active');
+    function toggleMenu() {
+      setMenuOpen(!document.querySelector('.nav').classList.contains('active'));
+    }
+
+    document.addEventListener('click', (event) => {
+      if (!event.target.closest('.nav, .hamburger')) setMenuOpen(false);
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && document.querySelector('.nav').classList.contains('active')) {
+        setMenuOpen(false);
+        document.querySelector('.hamburger').focus();
       }
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1200) setMenuOpen(false);
+    });
+    document.querySelectorAll('.nav a').forEach(link => {
+      link.addEventListener('click', () => setMenuOpen(false));
     });
 
     const carousel = document.querySelector('.testimonials-carousel');
@@ -779,61 +804,29 @@
       });
     }
 
-    function toggleMenu() {
-      const nav = document.querySelector('.nav');
-      const hamburger = document.querySelector('.hamburger');
-      const overlay = document.querySelector('.nav-overlay');
-
-      nav.classList.toggle('active');
-      hamburger.classList.toggle('active');
-
-      if (overlay) {
-        overlay.classList.toggle('active');
-      }
-
-      // Body scroll'u engelle/aç
-      document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
-    }
-
-    // Nav linklerine tıklanınca menüyü kapat
-    document.querySelectorAll('.nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        const nav = document.querySelector('.nav');
-        const hamburger = document.querySelector('.hamburger');
-        const overlay = document.querySelector('.nav-overlay');
-
-        if (nav.classList.contains('active')) {
-          nav.classList.remove('active');
-          hamburger.classList.remove('active');
-          if (overlay) overlay.classList.remove('active');
-          document.body.style.overflow = '';
-        }
-      });
-    });
-
   </script>
 
   <!-- Fixed Buttons -->
   <div class="fixed-action-buttons">
-    <a href="#application-form" class="fab-btn fab-apply">
+    <a href="#application-form" class="fab-btn fab-apply" data-i18n="apply" data-i18n-attr="aria-label">
       <i class="fa-solid fa-file-signature"></i>
-      <span class="fab-text">Başvur</span>
+      <span class="fab-text" data-i18n="apply">Başvur</span>
     </a>
-    <a href="tel:+905521309058" class="fab-btn fab-call">
+    <a href="tel:+905521309058" class="fab-btn fab-call" data-i18n="call" data-i18n-attr="aria-label">
       <i class="fa-solid fa-phone-volume"></i>
-      <span class="fab-text">Ara</span>
+      <span class="fab-text" data-i18n="call">Ara</span>
     </a>
-    <button type="button" id="whatsapp-toggle" class="fab-btn fab-whatsapp" aria-expanded="false" aria-controls="whatsapp-panel">
+    <button type="button" id="whatsapp-toggle" class="fab-btn fab-whatsapp" data-i18n="message-us" data-i18n-attr="aria-label" aria-expanded="false" aria-controls="whatsapp-panel">
       <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-      <span class="fab-text">Bize mesaj atın</span>
+      <span class="fab-text" data-i18n="message-us">Bize mesaj atın</span>
     </button>
     <div id="whatsapp-panel" class="whatsapp-panel" hidden>
-      <button type="button" class="whatsapp-close" aria-label="Mesaj alanını kapat">×</button>
-      <h3>Bize mesaj atın</h3>
-      <p>Öğrenciniz için bilgi almak ister misiniz?</p>
-      <label for="whatsapp-message">Mesajınız</label>
-      <textarea id="whatsapp-message" rows="5">Merhaba, oğlum/kızım ... sınıfa gidiyor. e-Pusula dersleri ve kayıt süreci hakkında bilgi alabilir miyim?</textarea>
-      <a id="whatsapp-send" class="button-primary" target="_blank" rel="noopener noreferrer">WhatsApp’ta Devam Et <i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+      <button type="button" class="whatsapp-close" aria-label="Mesaj alanını kapat" data-i18n="close-message" data-i18n-attr="aria-label">×</button>
+      <h3 data-i18n="message-us">Bize mesaj atın</h3>
+      <p data-i18n="would-you-like-more-information-for-your-child">Öğrenciniz için bilgi almak ister misiniz?</p>
+      <label for="whatsapp-message" data-i18n="your-message">Mesajınız</label>
+      <textarea id="whatsapp-message" rows="5" data-i18n="hello-my-child-is-in-grade-could-i-get-more-information-about-e-p">Merhaba, oğlum/kızım ... sınıfa gidiyor. e-Pusula dersleri ve kayıt süreci hakkında bilgi alabilir miyim?</textarea>
+      <a id="whatsapp-send" class="button-primary" target="_blank" rel="noopener noreferrer"><span data-i18n="continue-on-whatsapp">WhatsApp’ta Devam Et</span> <i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
     </div>
   </div>
 
@@ -862,6 +855,7 @@
         if (event.key === 'Escape' && !panel.hidden) closePanel();
       });
       message.addEventListener('input', updateLink);
+      document.addEventListener('languagechange', updateLink);
       updateLink();
     })();
   </script>
